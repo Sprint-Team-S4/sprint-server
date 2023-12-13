@@ -1,13 +1,20 @@
 package com.keyin.City;
+
 import jakarta.persistence.*;
 
 @Entity
 public class City {
+
+    //    ;Primary Key & Fields - - - -
+
     @Id
     @SequenceGenerator(name = "city_sequence", sequenceName = "city_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "city_sequence")
     private long id;
+
     private String name;
+
+    //    ;Getters & Setters - - - -
 
     public long getId() {
         return id;
