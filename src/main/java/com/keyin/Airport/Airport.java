@@ -1,5 +1,6 @@
 package com.keyin.Airport;
 
+import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
 import com.keyin.City.City;
 
@@ -20,6 +21,9 @@ public class Airport {
 
     @OneToOne
     private City city;
+
+    @ManyToOne
+    private Passengers passengers;
 
     //    ;Getters & Setters - - - -
 

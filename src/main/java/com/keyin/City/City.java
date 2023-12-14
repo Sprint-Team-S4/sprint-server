@@ -1,5 +1,6 @@
 package com.keyin.City;
 
+import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,6 +13,11 @@ public class City {
     private long id;
 
     private String name;
+
+    //    ;Relationships - - - -
+
+    @ManyToOne
+    private Passengers passengers;
 
     //    ;Getters & Setters - - - -
 

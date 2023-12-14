@@ -11,26 +11,27 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/city")
 public class CityController {
     @Autowired
     private CityRepository repo;
 
-    @GetMapping("/cities")
+    @GetMapping("/allcities")
     public List<City> getAllCities() {
         return (List<City>) repo.findAll();
     }
 
-    @GetMapping("/cities/passenger_search")
+    @GetMapping("/passenger_search")
     public List<City> getAllCities(@RequestParam String passengerName) {
         return (List<City>) repo.findByPassenger_Name(passengerName);
     }
 
-    @PostMapping("/city")
+    @PostMapping
     public void createCity(@RequestBody City city) {
         repo.save(city);
     }
 
-    @PutMapping("/city/{id}")
+    @PutMapping("/{id}")
     public void updateCity(@PathVariable String id, @RequestBody City city, HttpServletResponse response) {
         Optional<City> returnValue = repo.findById(Long.parseLong(id));
         City cityToUpdate;

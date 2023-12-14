@@ -78,9 +78,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>jakarta.persistence</groupId>
-            <artifactId>jakarta.persistence-api</artifactId>
-            <version>3.2.0-M1</version>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>jakarta.persistence</artifactId>
+            <version>2.2.3</version>
         </dependency>
     </dependencies>
 

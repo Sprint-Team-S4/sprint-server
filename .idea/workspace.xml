@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="182c98e9-ee3e-4d35-b91d-b4a6e29dfafe" name="Changes" comment="Fixed city repository to have find by passenger name">
+    <list default="true" id="182c98e9-ee3e-4d35-b91d-b4a6e29dfafe" name="Changes" comment="Merge remote-tracking branch 'origin/Arrival-Departure-Setup' into Arrival-Departure-Setup&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Controller/AirlineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Controller/AirlineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Controller/AirportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Controller/AirportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/CityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Controller/GateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Controller/GateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Controller/PassengersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Controller/PassengersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/RestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/RestApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +57,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.keyin.Passengers.Controller" />
@@ -133,7 +147,31 @@
       <option name="project" value="LOCAL" />
       <updated>1702571781372</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed city repository to have find by passenger name">
+      <option name="closed" value="true" />
+      <created>1702575035090</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702575035090</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/Arrival-Departure-Setup' into Arrival-Departure-Setup&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1702575152417</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702575152417</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/Arrival-Departure-Setup' into Arrival-Departure-Setup&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1702575161168</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702575161168</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,7 +215,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Josh's changes, messed with adding arrivals and departures, WIP" />
     <MESSAGE value="Sectioned things into files a little neater, added controllers, controllers are not finished though" />
+    <MESSAGE value="Unified login information, added a readme" />
     <MESSAGE value="Fixed city repository to have find by passenger name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed city repository to have find by passenger name" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Arrival-Departure-Setup' into Arrival-Departure-Setup&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/Arrival-Departure-Setup' into Arrival-Departure-Setup&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
 </project>

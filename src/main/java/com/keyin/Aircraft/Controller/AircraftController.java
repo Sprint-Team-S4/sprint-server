@@ -5,16 +5,18 @@ import com.keyin.Aircraft.Repository.AircraftRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/aircraft")
 public class AircraftController {
     @Autowired
     private AircraftRepository repo;
 
-    @GetMapping("/gates")
+    @GetMapping("/allaircrafts")
     public List<Aircraft> getAllAircrafts() {
         return (List<Aircraft>) repo.findAll();
     }

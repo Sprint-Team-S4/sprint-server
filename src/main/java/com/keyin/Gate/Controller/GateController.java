@@ -8,16 +8,17 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/gate")
 public class GateController {
     @Autowired
     private GateRepository repo;
 
-    @GetMapping("/gates")
+    @GetMapping("/allgates")
     public List<Gate> getAllGates() {
         return (List<Gate>) repo.findAll();
     }
 
-    @PostMapping("/gate")
+    @PostMapping("/creategate")
     public void createGate(@RequestBody Gate gate) {
         repo.save(gate);
     }
