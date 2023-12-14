@@ -5,7 +5,6 @@ import com.keyin.City.City;
 
 @Entity
 public class Airport {
-
     //    ;Primary Key & Fields - - - -
 
     @Id

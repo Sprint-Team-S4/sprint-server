@@ -8,7 +8,6 @@ import java.util.List;
 
 @Entity
 public class Passengers {
-
     //    ;Primary Key & Fields - - - -
 
     @Id

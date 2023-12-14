@@ -6,7 +6,6 @@ import java.util.List;
 
 @Entity
 public class Airline {
-
     //    ;Primary Key & Fields - - - -
 
     @Id
