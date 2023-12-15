@@ -6,8 +6,8 @@ import java.util.List;
 
 @Entity
 public class Airline {
-    //    ;Primary Key & Fields - - - -
 
+    //    ;Primary Key & Fields - - - -
     @Id
     @SequenceGenerator(name = "airline_sequence", sequenceName = "airline_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "airline_sequence")
@@ -18,12 +18,10 @@ public class Airline {
     private String contactEmail;
 
     //    ;Relationships - - - -
-
     @OneToMany
     private List<Aircraft> aircrafts;
 
     //    ;Getters & Setters - - - -
-
     public Long getId() {
         return id;
     }

@@ -11,6 +11,7 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "city", path = "city")
 public interface CityRepository extends JpaRepository<City, Long> {
 
+//    Find City by Passenger's Last Name - - - - (not needed, use as reference)
     @Query("SELECT c FROM City c JOIN c.passengers p WHERE p.lastName = :passengerName")
     List<City> findByPassenger_Name(@Param("passengerName") String passengerName);
 }

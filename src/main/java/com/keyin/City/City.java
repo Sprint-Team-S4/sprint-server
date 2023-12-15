@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 
 @Entity
 public class City {
-    //    ;Primary Key & Fields - - - -
 
+    //    ;Primary Key & Fields - - - -
     @Id
     @SequenceGenerator(name = "city_sequence", sequenceName = "city_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "city_sequence")
@@ -15,12 +15,10 @@ public class City {
     private String name;
 
     //    ;Relationships - - - -
-
     @ManyToOne
     private Passengers passengers;
 
     //    ;Getters & Setters - - - -
-
     public long getId() {
         return id;
     }

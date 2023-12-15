@@ -8,8 +8,8 @@ import java.util.List;
 
 @Entity
 public class Aircraft {
-    //    ;Primary Key & Fields - - - -
 
+    //    ;Primary Key & Fields - - - -
     @Id
     @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "aircraft_sequence")
@@ -22,7 +22,6 @@ public class Aircraft {
     private int numberOfPassengers;
 
     //    ;Relationships - - - -
-
     @ManyToMany
     private List<Passengers> passengers;
 
@@ -36,7 +35,6 @@ public class Aircraft {
     private Gate arrivalGate;
 
     //    ;Getters & Setters - - - -
-
     public long getId() {
         return id;
     }

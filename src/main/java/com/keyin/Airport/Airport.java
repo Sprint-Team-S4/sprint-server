@@ -6,8 +6,8 @@ import com.keyin.City.City;
 
 @Entity
 public class Airport {
-    //    ;Primary Key & Fields - - - -
 
+    //    ;Primary Key & Fields - - - -
     @Id
     @SequenceGenerator(name = "airport_sequence", sequenceName = "airport_sequence", allocationSize = 1, initialValue=2)
     @GeneratedValue(generator = "airport_sequence")
@@ -18,7 +18,6 @@ public class Airport {
     private String code;
 
     //    ;Relationships - - - -
-
     @OneToOne
     private City city;
 
@@ -26,7 +25,6 @@ public class Airport {
     private Passengers passengers;
 
     //    ;Getters & Setters - - - -
-
     public long getId() {
         return id;
     }

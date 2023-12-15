@@ -23,3 +23,8 @@ In order to run this program locally, you are going to need:
 - Run the command: docker build -t username/sprintserver .
 - Run the command: docker push username/sprintserver:latest
 - Run the command: docker-compose up
+
+# TO-DO LIST
+
+- Add "Flight" entity
+- Complete controllers

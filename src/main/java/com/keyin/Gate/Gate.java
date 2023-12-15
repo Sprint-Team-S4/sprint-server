@@ -7,8 +7,8 @@ import java.util.List;
 
 @Entity
 public class Gate {
-//    ;Primary Key & Fields - - - -
 
+//    ;Primary Key & Fields - - - -
     @Id
     @SequenceGenerator(name = "gate_sequence", sequenceName = "gate_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "gate_sequence")
@@ -19,7 +19,6 @@ public class Gate {
     private String terminalNum;
 
 //    ;Relationships - - - -
-
     @ManyToOne
     private Airport airport;
 
@@ -30,7 +29,6 @@ public class Gate {
     private List<Aircraft> arrivals;
 
 //    ;Getters & Setters - - - -
-
     public Long getId() {
         return id;
     }
