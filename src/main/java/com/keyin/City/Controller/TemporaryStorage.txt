@@ -1,0 +1,27 @@
+
+//    ;Change City Name (by id) - - - -
+    @PutMapping("/{id}")
+    public void updateCity(@PathVariable String id, @RequestBody City city, HttpServletResponse response) {
+        Optional<City> returnValue = repo.findById(Long.parseLong(id));
+        City cityToUpdate;
+
+        if (returnValue.isPresent()) {
+            cityToUpdate = returnValue.get();
+
+            cityToUpdate.setName(city.getName());
+
+            repo.save(cityToUpdate);
+        } else {
+            try {
+                response.sendError(404, "City with id: " + city.getId() + " not found.");
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+//    @GetMapping("/search_by_passenger")
+//    public List<City> getAllCities(@RequestParam String passengerName) {
+//        return (List<City>) repo.findByPassenger_Name(passengerName);
+//    }
+

@@ -1,0 +1,3 @@
+
+//    @Query("SELECT c FROM City c JOIN c.passengers p WHERE p.lastName = :passengerName")
+//    List<City> findByPassenger_Name(@Param("passengerName") String passengerName);

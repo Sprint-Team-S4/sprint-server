@@ -6,5 +6,4 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "gate", path = "gate")
 public interface GateRepository extends JpaRepository<Gate, Long> {
-
 }

@@ -1,8 +1,11 @@
 package com.keyin.Airport;
 
+import com.keyin.Gate.Gate;
 import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
 import com.keyin.City.City;
+
+import java.util.List;
 
 @Entity
 public class Airport {
@@ -23,6 +26,9 @@ public class Airport {
 
     @ManyToOne
     private Passengers passengers;
+
+    @OneToMany
+    private List<Gate> gates;
 
     //    ;Getters & Setters - - - -
     public long getId() {
