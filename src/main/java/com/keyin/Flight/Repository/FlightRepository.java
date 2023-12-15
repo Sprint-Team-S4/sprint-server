@@ -17,6 +17,7 @@ public interface FlightRepository extends JpaRepository<Flight, Long> {
     List<Flight> findByAirline_Name(@Param("airlineName") String airlineName);
 
 //    ;Find Flights by Status - - - -
+@Query("SELECT f FROM Flight f WHERE f.flightStatus = :flightStatus")
     List<Flight> findByStatus(@Param("flightStatus") String flightStatus);
 
 //    ;Find Flights by Airport - - - -
