@@ -1,5 +1,6 @@
 package com.keyin.City;
 
+import com.keyin.Airport.Airport;
 import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
 
@@ -17,6 +18,9 @@ public class City {
     //    ;Relationships - - - -
     @ManyToOne
     private Passengers passengers;
+
+    @ManyToOne
+    private Airport airport;
 
     //    ;Getters & Setters - - - -
     public long getId() {
