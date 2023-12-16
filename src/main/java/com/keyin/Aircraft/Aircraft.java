@@ -14,13 +14,10 @@ public class Aircraft {
     @GeneratedValue(generator = "aircraft_sequence")
     private long id;
 
-    private String type;
-
     private String airlineName;
 
-    private int numberOfPassengers;
-
     //    ;Relationships - - - -
+
     @ManyToMany
     private List<Passengers> passengers;
 
@@ -36,31 +33,9 @@ public class Aircraft {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public List<Airport> getAirports() {
+      return airports;
     }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getAirLine() {
-        return airlineName;
-    }
-
-    public void setAirLine(String airLine) {
-        this.airlineName = airLine;
-    }
-
-    public int getNumberOfPassengers() {
-        return numberOfPassengers;
-    }
-
-    public void setNumberOfPassengers(int numberOfPassengers) {
-        this.numberOfPassengers = numberOfPassengers;
-    }
-
-    public List<Airport> getAirports() {return airports;}
 
     public void setAirports(List<Airport> airports) {
         this.airports = airports;
@@ -80,5 +55,5 @@ public class Aircraft {
 
     public void setPassengers(List<Passengers> passengers) {
         this.passengers = passengers;
-    }
+
 }
