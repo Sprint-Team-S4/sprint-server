@@ -1,25 +1,33 @@
 package com.keyin.Airline;
+
 import com.keyin.Aircraft.Aircraft;
 import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
 public class Airline {
+
+    //    ;Primary Key & Fields - - - -
     @Id
     @SequenceGenerator(name = "airline_sequence", sequenceName = "airline_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "airline_sequence")
-    private long id;
+    private Long id;
+
     private String airlineName;
+
     private String contactEmail;
 
+    //    ;Relationships - - - -
     @OneToMany
     private List<Aircraft> aircrafts;
 
-    public long getId() {
+    //    ;Getters & Setters - - - -
+    public Long getId() {
         return id;
     }
 
     public void setId(long id) {
+
         this.id = id;
     }
 
@@ -37,5 +45,13 @@ public class Airline {
 
     public void setContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
+    }
+
+    public List<Aircraft> getAircrafts() {
+        return aircrafts;
+    }
+
+    public void setAircrafts(List<Aircraft> aircrafts) {
+        this.aircrafts = aircrafts;
     }
 }

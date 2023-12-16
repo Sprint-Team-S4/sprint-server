@@ -1,19 +1,36 @@
 package com.keyin.Airport;
+
+import com.keyin.Gate.Gate;
+import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
 import com.keyin.City.City;
 
+import java.util.List;
+
 @Entity
 public class Airport {
+
+    //    ;Primary Key & Fields - - - -
     @Id
     @SequenceGenerator(name = "airport_sequence", sequenceName = "airport_sequence", allocationSize = 1, initialValue=2)
     @GeneratedValue(generator = "airport_sequence")
     private long id;
+
     private String name;
+
     private String code;
+
+    //    ;Relationships - - - -
     @OneToOne
     private City city;
 
+    @ManyToOne
+    private Passengers passengers;
 
+    @OneToMany
+    private List<Gate> gates;
+
+    //    ;Getters & Setters - - - -
     public long getId() {
         return id;
     }
