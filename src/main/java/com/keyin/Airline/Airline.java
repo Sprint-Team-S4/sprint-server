@@ -11,7 +11,7 @@ public class Airline {
     @Id
     @SequenceGenerator(name = "airline_sequence", sequenceName = "airline_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "airline_sequence")
-    private Long id;
+    private long id;
 
     private String airlineName;
 

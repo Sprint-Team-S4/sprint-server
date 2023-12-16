@@ -22,12 +22,6 @@ public class Gate {
     @ManyToOne
     private Airport airport;
 
-    @ManyToMany
-    private List<Aircraft> departures;
-
-    @ManyToMany
-    private List<Aircraft> arrivals;
-
 //    ;Getters & Setters - - - -
     public Long getId() {
         return id;
@@ -59,21 +53,5 @@ public class Gate {
 
     public void setAirport(Airport airport) {
         this.airport = airport;
-    }
-
-    public List<Aircraft> getDepartures() {
-        return departures;
-    }
-
-    public void setDepartures(List<Aircraft> departures) {
-        this.departures = departures;
-    }
-
-    public List<Aircraft> getArrivals() {
-        return arrivals;
-    }
-
-    public void setArrivals(List<Aircraft> arrivals) {
-        this.arrivals = arrivals;
     }
 }

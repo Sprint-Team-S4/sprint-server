@@ -25,7 +25,7 @@ public class Airport {
     private City city;
 
     @ManyToOne
-    private Passengers passengers;
+    private List<Passengers> passengers;
 
     @OneToMany
     private List<Gate> gates;
@@ -61,5 +61,21 @@ public class Airport {
 
     public void setCity(City city) {
         this.city = city;
+    }
+
+    public List<Passengers> getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(List<Passengers> passengers) {
+        this.passengers = passengers;
+    }
+
+    public List<Gate> getGates() {
+        return gates;
+    }
+
+    public void setGates(List<Gate> gates) {
+        this.gates = gates;
     }
 }
