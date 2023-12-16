@@ -1,6 +1,5 @@
 package com.keyin.Aircraft;
 
-import com.keyin.Gate.Gate;
 import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
 import com.keyin.Airport.Airport;
@@ -27,12 +26,6 @@ public class Aircraft {
 
     @ManyToMany
     private List<Airport> airports;
-
-    @ManyToOne
-    private Gate departureGate;
-
-    @ManyToOne
-    private Gate arrivalGate;
 
     //    ;Getters & Setters - - - -
     public long getId() {
@@ -87,21 +80,5 @@ public class Aircraft {
 
     public void setPassengers(List<Passengers> passengers) {
         this.passengers = passengers;
-    }
-
-    public Gate getDepartureGate() {
-        return departureGate;
-    }
-
-    public void setDepartureGate(Gate departureGate) {
-        this.departureGate = departureGate;
-    }
-
-    public Gate getArrivalGate() {
-        return arrivalGate;
-    }
-
-    public void setArrivalGate(Gate arrivalGate) {
-        this.arrivalGate = arrivalGate;
     }
 }

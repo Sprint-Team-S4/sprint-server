@@ -6,5 +6,4 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "aircraft", path = "aircraft")
 public interface AircraftRepository extends JpaRepository<Aircraft, Long> {
-
 }
