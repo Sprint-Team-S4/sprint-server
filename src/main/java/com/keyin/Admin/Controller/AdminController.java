@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RequestMapping("/admin")
 public class AdminController {
-
     //    ;Repository - - - -
     @Autowired
     private AdminRepository repo;

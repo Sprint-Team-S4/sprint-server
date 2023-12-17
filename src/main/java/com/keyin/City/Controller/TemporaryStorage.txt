@@ -25,3 +25,7 @@
 //        return (List<City>) repo.findByPassenger_Name(passengerName);
 //    }
 
+//    ;Get City by Airport - - - -
+    @GetMapping("/search_by_airport")
+    public City getCityByAirport(@RequestParam String airportName) {
+        return (City) repo.findByAirport(airportName);

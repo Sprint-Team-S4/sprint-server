@@ -1,9 +1,7 @@
 package com.keyin.Gate;
 
-import com.keyin.Aircraft.Aircraft;
 import com.keyin.Airport.Airport;
 import jakarta.persistence.*;
-import java.util.List;
 
 @Entity
 public class Gate {
@@ -12,7 +10,7 @@ public class Gate {
     @Id
     @SequenceGenerator(name = "gate_sequence", sequenceName = "gate_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "gate_sequence")
-    private Long id;
+    private long id;
 
     private String gateNumber;
 
@@ -22,18 +20,12 @@ public class Gate {
     @ManyToOne
     private Airport airport;
 
-    @ManyToMany
-    private List<Aircraft> departures;
-
-    @ManyToMany
-    private List<Aircraft> arrivals;
-
 //    ;Getters & Setters - - - -
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -59,21 +51,5 @@ public class Gate {
 
     public void setAirport(Airport airport) {
         this.airport = airport;
-    }
-
-    public List<Aircraft> getDepartures() {
-        return departures;
-    }
-
-    public void setDepartures(List<Aircraft> departures) {
-        this.departures = departures;
-    }
-
-    public List<Aircraft> getArrivals() {
-        return arrivals;
-    }
-
-    public void setArrivals(List<Aircraft> arrivals) {
-        this.arrivals = arrivals;
     }
 }

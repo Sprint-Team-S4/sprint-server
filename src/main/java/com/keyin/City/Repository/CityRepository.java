@@ -11,8 +11,4 @@ import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "city", path = "city")
 public interface CityRepository extends JpaRepository<City, Long> {
-
-//    ;Find City by Airport - - - -
-    @Query("SELECT c FROM City c JOIN c.airport p WHERE p.name = :airportName")
-    City findByAirport(@Param("airportName") String airportName);
 }

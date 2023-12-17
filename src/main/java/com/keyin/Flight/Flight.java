@@ -21,23 +21,25 @@ public class Flight {
 
     private String flightStatus; // Arrival/Departure
 
+    private String flightNumber;
+
 //    ;Relationships - - - -
-    @OneToOne
+    @ManyToOne
     private City city;
 
-    @OneToOne
+    @ManyToOne
     private Airport airport;
 
-    @OneToOne
+    @ManyToOne
     private Airline airline;
 
-    @OneToOne
+    @ManyToOne
     private Gate gate;
 
-    @OneToOne
+    @ManyToOne
     private Aircraft aircraft;
 
-    @OneToMany
+    @ManyToMany
     private List<Passengers> passengers;
 
 //    ;Getters & Setters - - - -
@@ -47,10 +49,6 @@ public class Flight {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public void setFlightNumber(String flightStatus) {
-        this.flightStatus = flightStatus;
     }
 
     public City getCity() {
@@ -99,6 +97,14 @@ public class Flight {
 
     public void setFlightStatus(String flightStatus) {
         this.flightStatus = flightStatus;
+    }
+
+    public String getFlightNumber() {
+        return flightNumber;
+    }
+
+    public void setFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
     }
 
     public Aircraft getAircraft() {

@@ -4,193 +4,140 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<<<< Temporary merge branch 1
-    <list default="true" id="182c98e9-ee3e-4d35-b91d-b4a6e29dfafe" name="Changes" comment="Sectioned things into files a little neater, added controllers, controllers are not finished though">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/CityRepository.java" afterDir="false" />
-=========
-    <list default="true" id="182c98e9-ee3e-4d35-b91d-b4a6e29dfafe" name="Changes" comment="Fixed city repository to have find by passenger name">
+    <list default="true" id="243cde0a-a05c-4003-b806-cf9afdb67503" name="Changes" comment="Merge remote-tracking branch 'origin/Kayleighs-WIP-Branch' into Kayleighs-WIP-Branch&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/keyin/Aircraft/Aircraft.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
->>>>>>>>> Temporary merge branch 2
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Repository/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Repository/AdminRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Aircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Repository/AircraftRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Repository/AircraftRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/TemporaryStorage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/TemporaryStorage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/CityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/TemporaryStorage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/TemporaryStorage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/DataLoader/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/DataLoader/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Gate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gates/Gates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gates/GatesRestAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Passengers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Passengers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/RestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/RestApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/Arrival-Departure-Setup" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="S4-sprint-Kayleigh" />
-      </map>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2ZVPagsrRSN4Uf5Nap7KYgT51oD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
-  }
-}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.keyin.DataLoader" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.keyin.DataLoader" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.keyin.Passengers.Controller" />
-      <recent name="com.keyin.Gate.Controller" />
-      <recent name="com.keyin.Airline.Controller" />
-      <recent name="com.keyin.Aircraft.Controller" />
-      <recent name="com.keyin.City.Controller" />
+      <recent name="com.keyin.Flight.Repository" />
+      <recent name="com.keyin.Flight.Controller" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="182c98e9-ee3e-4d35-b91d-b4a6e29dfafe" name="Changes" comment="" />
-      <created>1702504338579</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1702504338579</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Added Josh's changes, messed with adding arrivals and departures, WIP">
+    <task id="LOCAL-00001" summary="Edited controllers, added a lot more comments">
       <option name="closed" value="true" />
-      <created>1702504887028</created>
+      <created>1702600307547</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1702504887028</updated>
+      <updated>1702600307547</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added Josh's changes, messed with adding arrivals and departures, WIP">
+    <task id="LOCAL-00002" summary="Added flight entity, removed crud operations from controllers, added a lot to FlightController.java for search">
       <option name="closed" value="true" />
-      <created>1702504911210</created>
+      <created>1702619548785</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1702504911210</updated>
+      <updated>1702619548785</updated>
     </task>
-    <task id="LOCAL-00003" summary="Added Josh's changes, messed with adding arrivals and departures, WIP">
+    <task id="LOCAL-00003" summary="Made it runnable with docker">
       <option name="closed" value="true" />
-      <created>1702505110663</created>
+      <created>1702621507388</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1702505110663</updated>
+      <updated>1702621507388</updated>
     </task>
-    <task id="LOCAL-00004" summary="Sectioned things into files a little neater, added controllers, controllers are not finished though">
+    <task id="LOCAL-00004" summary="Added &quot;find city by airport&quot; functionality &amp; tested to make sure it is still able to be ran">
       <option name="closed" value="true" />
-      <created>1702571397383</created>
+      <created>1702681324321</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1702571397383</updated>
+      <updated>1702681324321</updated>
     </task>
-    <task id="LOCAL-00005" summary="Sectioned things into files a little neater, added controllers, controllers are not finished though">
+    <task id="LOCAL-00005" summary="Added the Admin entity, removed some parts from Aircraft">
       <option name="closed" value="true" />
-      <created>1702571439898</created>
+      <created>1702702534123</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1702571439898</updated>
+      <updated>1702702534123</updated>
     </task>
-    <task id="LOCAL-00006" summary="Sectioned things into files a little neater, added controllers, controllers are not finished though">
+    <task id="LOCAL-00006" summary="Added DataLoader, filled it with data to inject into the database">
       <option name="closed" value="true" />
-      <created>1702571525982</created>
+      <created>1702756543440</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1702571525983</updated>
+      <updated>1702756543440</updated>
     </task>
-<<<<<<<<< Temporary merge branch 1
-    <option name="localTasksCounter" value="7" />
-=========
-    <task id="LOCAL-00007" summary="Fixed city repository to have find by passenger name">
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/Kayleighs-WIP-Branch' into Kayleighs-WIP-Branch&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/keyin/Aircraft/Aircraft.java">
       <option name="closed" value="true" />
-      <created>1702571734305</created>
+      <created>1702756705717</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1702571734305</updated>
+      <updated>1702756705717</updated>
     </task>
-    <task id="LOCAL-00008" summary="Fixed city repository to have find by passenger name">
-      <option name="closed" value="true" />
-      <created>1702571781372</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1702571781372</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
->>>>>>>>> Temporary merge branch 2
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/Arrival-Departure-Setup" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/Arrival-Departure-Setup" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Josh's changes, messed with adding arrivals and departures, WIP" />
-    <MESSAGE value="Sectioned things into files a little neater, added controllers, controllers are not finished though" />
-<<<<<<<<< Temporary merge branch 1
-    <option name="LAST_COMMIT_MESSAGE" value="Sectioned things into files a little neater, added controllers, controllers are not finished though" />
-=========
-    <MESSAGE value="Fixed city repository to have find by passenger name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed city repository to have find by passenger name" />
->>>>>>>>> Temporary merge branch 2
+    <MESSAGE value="Edited controllers, added a lot more comments" />
+    <MESSAGE value="Added flight entity, removed crud operations from controllers, added a lot to FlightController.java for search" />
+    <MESSAGE value="Made it runnable with docker" />
+    <MESSAGE value="Added &quot;find city by airport&quot; functionality &amp; tested to make sure it is still able to be ran" />
+    <MESSAGE value="Added the Admin entity, removed some parts from Aircraft" />
+    <MESSAGE value="Added DataLoader, filled it with data to inject into the database" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Kayleighs-WIP-Branch' into Kayleighs-WIP-Branch&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/keyin/Aircraft/Aircraft.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/Kayleighs-WIP-Branch' into Kayleighs-WIP-Branch&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/keyin/Aircraft/Aircraft.java" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/keyin/Flight/Flight.java</url>
+          <line>36</line>
+          <properties field="gate" class="com.keyin.Flight.Flight" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/keyin/Flight/Flight.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -21,11 +21,8 @@ public class Airport {
     private String code;
 
     //    ;Relationships - - - -
-    @OneToOne
-    private City city;
-
     @ManyToOne
-    private Passengers passengers;
+    private City city;
 
     @OneToMany
     private List<Gate> gates;
@@ -61,5 +58,13 @@ public class Airport {
 
     public void setCity(City city) {
         this.city = city;
+    }
+
+    public List<Gate> getGates() {
+        return gates;
+    }
+
+    public void setGates(List<Gate> gates) {
+        this.gates = gates;
     }
 }
