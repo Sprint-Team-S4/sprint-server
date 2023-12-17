@@ -24,22 +24,22 @@ public class Flight {
     private String flightNumber;
 
 //    ;Relationships - - - -
-    @OneToOne
+    @ManyToOne
     private City city;
 
-    @OneToOne
+    @ManyToOne
     private Airport airport;
 
-    @OneToOne
+    @ManyToOne
     private Airline airline;
 
-    @OneToOne
+    @ManyToOne
     private Gate gate;
 
-    @OneToOne
+    @ManyToOne
     private Aircraft aircraft;
 
-    @OneToMany
+    @ManyToMany
     private List<Passengers> passengers;
 
 //    ;Getters & Setters - - - -

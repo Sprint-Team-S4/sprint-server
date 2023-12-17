@@ -1,8 +1,9 @@
 package com.keyin.City;
 
 import com.keyin.Airport.Airport;
-import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class City {
@@ -15,12 +16,11 @@ public class City {
 
     private String name;
 
-    //    ;Relationships - - - -
-    @ManyToOne
-    private Passengers passengers;
+    private String country;
 
-    @ManyToOne
-    private Airport airport;
+    //    ;Relationships - - - -
+    @OneToMany
+    private List<Airport> airports;
 
     //    ;Getters & Setters - - - -
     public long getId() {
@@ -37,5 +37,21 @@ public class City {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public List<Airport> getAirports() {
+        return airports;
+    }
+
+    public void setAirports(List<Airport> airports) {
+        this.airports = airports;
     }
 }

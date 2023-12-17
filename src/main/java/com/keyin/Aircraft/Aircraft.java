@@ -1,6 +1,6 @@
 package com.keyin.Aircraft;
 
-import com.keyin.Passengers.Passengers;
+import com.keyin.Airline.Airline;
 import jakarta.persistence.*;
 import com.keyin.Airport.Airport;
 import java.util.List;
@@ -14,11 +14,9 @@ public class Aircraft {
     @GeneratedValue(generator = "aircraft_sequence")
     private long id;
 
-    private String airlineName;
-
     //    ;Relationships - - - -
-    @ManyToMany
-    private List<Passengers> passengers;
+    @ManyToOne
+    private Airline airline;
 
     @ManyToMany
     private List<Airport> airports;
@@ -32,20 +30,12 @@ public class Aircraft {
         this.id = id;
     }
 
-    public String getAirlineName() {
-        return airlineName;
+    public Airline getAirline() {
+        return airline;
     }
 
-    public void setAirlineName(String airlineName) {
-        this.airlineName = airlineName;
-    }
-
-    public List<Passengers> getPassengers() {
-        return passengers;
-    }
-
-    public void setPassengers(List<Passengers> passengers) {
-        this.passengers = passengers;
+    public void setAirline(Airline airline) {
+        this.airline = airline;
     }
 
     public List<Airport> getAirports() {return airports;}

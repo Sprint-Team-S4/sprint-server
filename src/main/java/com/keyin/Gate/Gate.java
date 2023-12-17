@@ -1,9 +1,7 @@
 package com.keyin.Gate;
 
-import com.keyin.Aircraft.Aircraft;
 import com.keyin.Airport.Airport;
 import jakarta.persistence.*;
-import java.util.List;
 
 @Entity
 public class Gate {
@@ -12,7 +10,7 @@ public class Gate {
     @Id
     @SequenceGenerator(name = "gate_sequence", sequenceName = "gate_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "gate_sequence")
-    private Long id;
+    private long id;
 
     private String gateNumber;
 
@@ -23,11 +21,11 @@ public class Gate {
     private Airport airport;
 
 //    ;Getters & Setters - - - -
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
