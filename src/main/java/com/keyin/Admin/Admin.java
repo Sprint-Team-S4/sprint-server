@@ -1,18 +1,22 @@
 package com.keyin.Admin;
 
 import jakarta.persistence.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity
 public class Admin {
 
     //    ;Primary Key & Fields - - - -
     @Id
+    @NotNull
     @SequenceGenerator(name = "admin_sequence", sequenceName = "admin_sequence", allocationSize = 1, initialValue = 1)
     @GeneratedValue(generator = "admin_sequence")
     private long id;
 
+    @NotNull
     private String username;
 
+    @NotNull
     private String password;
 
     //    ;Getters & Setters - - - -

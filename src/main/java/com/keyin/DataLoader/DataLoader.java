@@ -16,6 +16,7 @@ import com.keyin.Gate.Gate;
 import com.keyin.Gate.Repository.GateRepository;
 import com.keyin.Passengers.Passengers;
 import com.keyin.Passengers.Repository.PassengersRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 import java.util.ArrayList;
@@ -34,6 +35,7 @@ public class DataLoader implements ApplicationEvent {
     private final GateRepository gateRepository;
     private final PassengersRepository passengersRepository;
 
+    @Autowired
     public DataLoader(AircraftRepository aircraftRepository, AdminRepository adminRepository, AirlineRepository airlineRepository, AirportRepository airportRepository, CityRepository cityRepository, FlightRepository flightRepository, GateRepository gateRepository, PassengersRepository passengersRepository) {
         this.adminRepository = adminRepository;
         this.aircraftRepository = aircraftRepository;

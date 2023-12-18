@@ -1,17 +1,21 @@
 package com.keyin.Passengers;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Passengers {
     //    ;Primary Key & Fields - - - -
     @Id
+    @NotNull
     @SequenceGenerator(name = "passenger_sequence", sequenceName = "passenger_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "passenger_sequence")
     private long id;
 
+    @NotNull
     private String firstName;
 
+    @NotNull
     private String lastName;
 
     private String phoneNumber;

@@ -2,6 +2,7 @@ package com.keyin.City;
 
 import com.keyin.Airport.Airport;
 import jakarta.persistence.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.List;
 
@@ -10,12 +11,15 @@ public class City {
 
     //    ;Primary Key & Fields - - - -
     @Id
+    @NotNull
     @SequenceGenerator(name = "city_sequence", sequenceName = "city_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "city_sequence")
     private long id;
 
+    @NotNull
     private String name;
 
+    @NotNull
     private String country;
 
     //    ;Relationships - - - -

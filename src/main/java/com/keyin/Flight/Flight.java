@@ -7,6 +7,7 @@ import com.keyin.City.City;
 import com.keyin.Gate.Gate;
 import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.List;
 
@@ -15,12 +16,15 @@ public class Flight {
 
 //    ;Primary Key & Fields - - - -
     @Id
+    @NotNull
     @SequenceGenerator(name = "flight_sequence", sequenceName = "flight_sequence", allocationSize = 1, initialValue = 2)
     @GeneratedValue(generator = "flight_sequence")
     private long id;
 
+    @NotNull
     private String flightStatus; // Arrival/Departure
 
+    @NotNull
     private String flightNumber;
 
 //    ;Relationships - - - -

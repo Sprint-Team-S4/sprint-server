@@ -4,28 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="243cde0a-a05c-4003-b806-cf9afdb67503" name="Changes" comment="Merge remote-tracking branch 'origin/Kayleighs-WIP-Branch' into Kayleighs-WIP-Branch&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/keyin/Aircraft/Aircraft.java">
+    <list default="true" id="243cde0a-a05c-4003-b806-cf9afdb67503" name="Changes" comment="Added GlobalCorsConfig">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Service/AircraftService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Service/AirlineService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Service/AirportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Service/CityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/DataLoader/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Service/FlightService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Service/GateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Service/PassengersService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Repository/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Repository/AdminRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Aircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Aircraft.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Repository/AircraftRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Repository/AircraftRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Airline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Airline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Controller/AirlineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Controller/AirlineController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Controller/AirportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Controller/AirportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Repository/AirportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Repository/AirportRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/CityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/TemporaryStorage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/TemporaryStorage.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/CityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/TemporaryStorage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Repository/TemporaryStorage.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/DataLoader/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/DataLoader/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/DataLoader/GlobalCorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Controller/FlightController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Controller/GateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Controller/GateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Gate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gates/Gates.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gates/GatesRestAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Controller/PassengersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Controller/PassengersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Passengers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Passengers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/RestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/RestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Repository/PassengersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Repository/PassengersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +46,32 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ZgN63MNdVRu804RWUJO0ODDEt2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.keyin.DataLoader" />
@@ -53,6 +84,7 @@
       <recent name="com.keyin.Flight.Controller" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="Edited controllers, added a lot more comments">
       <option name="closed" value="true" />
@@ -110,10 +142,34 @@
       <option name="project" value="LOCAL" />
       <updated>1702756705717</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="243cde0a-a05c-4003-b806-cf9afdb67503" name="Changes" comment="Merge remote-tracking branch 'origin/Kayleighs-WIP-Branch' into Kayleighs-WIP-Branch&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/keyin/Aircraft/Aircraft.java" />
+      <created>1702839587145</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702839587145</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Latest Updates">
+      <option name="closed" value="true" />
+      <created>1702839834676</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702839834676</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added GlobalCorsConfig">
+      <option name="closed" value="true" />
+      <created>1702929057328</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702929057328</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Edited controllers, added a lot more comments" />
     <MESSAGE value="Added flight entity, removed crud operations from controllers, added a lot to FlightController.java for search" />
     <MESSAGE value="Made it runnable with docker" />
@@ -121,23 +177,8 @@
     <MESSAGE value="Added the Admin entity, removed some parts from Aircraft" />
     <MESSAGE value="Added DataLoader, filled it with data to inject into the database" />
     <MESSAGE value="Merge remote-tracking branch 'origin/Kayleighs-WIP-Branch' into Kayleighs-WIP-Branch&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/keyin/Aircraft/Aircraft.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/Kayleighs-WIP-Branch' into Kayleighs-WIP-Branch&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/keyin/Aircraft/Aircraft.java" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/com/keyin/Flight/Flight.java</url>
-          <line>36</line>
-          <properties field="gate" class="com.keyin.Flight.Flight" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/keyin/Flight/Flight.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Latest Updates" />
+    <MESSAGE value="Added GlobalCorsConfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added GlobalCorsConfig" />
   </component>
 </project>

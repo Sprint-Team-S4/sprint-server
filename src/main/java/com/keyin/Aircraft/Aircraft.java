@@ -3,6 +3,8 @@ package com.keyin.Aircraft;
 import com.keyin.Airline.Airline;
 import jakarta.persistence.*;
 import com.keyin.Airport.Airport;
+import org.antlr.v4.runtime.misc.NotNull;
+
 import java.util.List;
 
 @Entity
@@ -10,6 +12,7 @@ public class Aircraft {
 
     //    ;Primary Key & Fields - - - -
     @Id
+    @NotNull
     @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "aircraft_sequence")
     private long id;
