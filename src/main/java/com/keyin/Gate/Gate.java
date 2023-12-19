@@ -7,11 +7,9 @@ import org.antlr.v4.runtime.misc.NotNull;
 @Entity
 public class Gate {
 
-//    ;Primary Key & Fields - - - -
+    //    Primary Key & Fields - - - -
     @Id
-    @NotNull
-    @SequenceGenerator(name = "gate_sequence", sequenceName = "gate_sequence", allocationSize = 1, initialValue=1)
-    @GeneratedValue(generator = "gate_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull
@@ -20,11 +18,13 @@ public class Gate {
     @NotNull
     private String terminalNum;
 
-//    ;Relationships - - - -
+    //    Relationships - - - -
+
     @ManyToOne
+    @JoinColumn(name = "airport_id")
     private Airport airport;
 
-//    ;Getters & Setters - - - -
+    //    Getters & Setters - - - -
     public long getId() {
         return id;
     }

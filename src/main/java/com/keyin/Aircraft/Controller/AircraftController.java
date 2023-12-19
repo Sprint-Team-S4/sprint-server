@@ -41,7 +41,7 @@ public class AircraftController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Aircraft> updateAircraft(@PathVariable Long id, @Valid @RequestBody Aircraft aircraftDetails) {
-        Aircraft updatedAircraft = aircraftService.updateAircraft(id, aircraftDetails);
+        Aircraft updatedAircraft = aircraftService.updateAircraft(id);
         return ResponseEntity.ok(updatedAircraft);
     }
 

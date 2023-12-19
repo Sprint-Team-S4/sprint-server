@@ -4,16 +4,15 @@ import com.keyin.Aircraft.Aircraft;
 import jakarta.persistence.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Airline {
 
-    //    ;Primary Key & Fields - - - -
+    //    Primary Key & Fields - - - -
     @Id
-    @NotNull
-    @SequenceGenerator(name = "airline_sequence", sequenceName = "airline_sequence", allocationSize = 1, initialValue=1)
-    @GeneratedValue(generator = "airline_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull
@@ -22,11 +21,11 @@ public class Airline {
     @NotNull
     private String contactEmail;
 
-    //    ;Relationships - - - -
-    @OneToMany
-    private List<Aircraft> aircrafts;
+    //    Relationships - - - -
+    @OneToMany(mappedBy = "airline", cascade = CascadeType.ALL)
+    private List<Aircraft> aircrafts = new ArrayList<>();
 
-    //    ;Getters & Setters - - - -
+    //    Getters & Setters - - - -
     public long getId() {
         return id;
     }

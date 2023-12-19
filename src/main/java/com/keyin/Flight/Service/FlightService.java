@@ -36,7 +36,6 @@ public class FlightService {
         flight.setFlightStatus(flightDetails.getFlightStatus());
         flight.setFlightNumber(flightDetails.getFlightNumber());
         flight.setAirport(flightDetails.getAirport());
-        flight.setAirline(flightDetails.getAirline());
         flight.setGate(flightDetails.getGate());
         flight.setAircraft(flightDetails.getAircraft());
         flight.setPassengers(flightDetails.getPassengers());

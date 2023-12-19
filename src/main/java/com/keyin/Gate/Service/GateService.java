@@ -36,7 +36,6 @@ public class GateService {
             Gate gate = optionalGate.get();
             gate.setGateNumber(gateDetails.getGateNumber());
             gate.setTerminalNum(gateDetails.getTerminalNum());
-            gate.setAirport(gateDetails.getAirport());
             return gateRepository.save(gate);
         }
         return null;

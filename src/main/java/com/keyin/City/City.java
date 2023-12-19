@@ -4,16 +4,15 @@ import com.keyin.Airport.Airport;
 import jakarta.persistence.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class City {
 
-    //    ;Primary Key & Fields - - - -
+    //    Primary Key & Fields - - - -
     @Id
-    @NotNull
-    @SequenceGenerator(name = "city_sequence", sequenceName = "city_sequence", allocationSize = 1, initialValue=1)
-    @GeneratedValue(generator = "city_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull
@@ -22,11 +21,11 @@ public class City {
     @NotNull
     private String country;
 
-    //    ;Relationships - - - -
-    @OneToMany
-    private List<Airport> airports;
+    //    Relationships - - - -
+    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
+    private List<Airport> airports = new ArrayList<>();
 
-    //    ;Getters & Setters - - - -
+    //    Getters & Setters - - - -
     public long getId() {
         return id;
     }

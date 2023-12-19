@@ -1,49 +1,47 @@
 package com.keyin.Flight;
 
 import com.keyin.Aircraft.Aircraft;
-import com.keyin.Airline.Airline;
 import com.keyin.Airport.Airport;
 import com.keyin.Gate.Gate;
 import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Flight {
 
-//    Primary Key & Fields - - - -
+    //    Primary Key & Fields - - - -
     @Id
-    @NotNull
-    @SequenceGenerator(name = "flight_sequence", sequenceName = "flight_sequence", allocationSize = 1, initialValue = 1)
-    @GeneratedValue(generator = "flight_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull
-    private String flightStatus; // Arrival/Departure
+    private String flightStatus; // Arriving/Departing
 
     @NotNull
     private String flightNumber;
 
-//    Relationships - - - -
-
+    //    Relationships - - - -
     @ManyToOne
+    @JoinColumn(name = "airport_id")
     private Airport airport;
 
     @ManyToOne
-    private Airline airline;
-
-    @ManyToOne
+    @JoinColumn(name = "gate_id")
     private Gate gate;
 
     @ManyToOne
+    @JoinColumn(name = "aircraft_id")
     private Aircraft aircraft;
 
-    @ManyToMany
-    private List<Passengers> passengers;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "flight_id")
+    private List<Passengers> passengers = new ArrayList<>();
 
-//    Getters & Setters - - - -
+    //    Getters & Setters - - - -
     public long getId() {
         return id;
     }
@@ -58,14 +56,6 @@ public class Flight {
 
     public void setAirport(Airport airport) {
         this.airport = airport;
-    }
-
-    public Airline getAirline() {
-        return airline;
-    }
-
-    public void setAirline(Airline airline) {
-        this.airline = airline;
     }
 
     public Gate getGate() {
