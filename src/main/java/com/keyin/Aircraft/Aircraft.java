@@ -2,7 +2,6 @@ package com.keyin.Aircraft;
 
 import com.keyin.Airline.Airline;
 import jakarta.persistence.*;
-import com.keyin.Airport.Airport;
 import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.List;
@@ -10,21 +9,17 @@ import java.util.List;
 @Entity
 public class Aircraft {
 
-    //    ;Primary Key & Fields - - - -
+    //    Primary Key & Fields - - - -
     @Id
-    @NotNull
-    @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", allocationSize = 1, initialValue=1)
-    @GeneratedValue(generator = "aircraft_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    //    ;Relationships - - - -
+    //    Relationships - - - -
     @ManyToOne
+    @JoinColumn(name = "airline_id")
     private Airline airline;
 
-    @ManyToMany
-    private List<Airport> airports;
-
-    //    ;Getters & Setters - - - -
+    //    Getters & Setters - - - -
     public long getId() {
         return id;
     }
@@ -39,12 +34,6 @@ public class Aircraft {
 
     public void setAirline(Airline airline) {
         this.airline = airline;
-    }
-
-    public List<Airport> getAirports() {return airports;}
-
-    public void setAirports(List<Airport> airports) {
-        this.airports = airports;
     }
 
 }

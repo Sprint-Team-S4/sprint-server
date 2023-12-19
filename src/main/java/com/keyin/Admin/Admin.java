@@ -6,11 +6,9 @@ import org.antlr.v4.runtime.misc.NotNull;
 @Entity
 public class Admin {
 
-    //    ;Primary Key & Fields - - - -
+    //    Primary Key & Fields - - - -
     @Id
-    @NotNull
-    @SequenceGenerator(name = "admin_sequence", sequenceName = "admin_sequence", allocationSize = 1, initialValue = 1)
-    @GeneratedValue(generator = "admin_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull
@@ -19,7 +17,7 @@ public class Admin {
     @NotNull
     private String password;
 
-    //    ;Getters & Setters - - - -
+    //    Getters & Setters - - - -
     public long getId() {
         return id;
     }

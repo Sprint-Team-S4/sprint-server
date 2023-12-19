@@ -5,11 +5,10 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Passengers {
-    //    ;Primary Key & Fields - - - -
+
+    //    Primary Key & Fields - - - -
     @Id
-    @NotNull
-    @SequenceGenerator(name = "passenger_sequence", sequenceName = "passenger_sequence", allocationSize = 1, initialValue=1)
-    @GeneratedValue(generator = "passenger_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull
@@ -20,7 +19,7 @@ public class Passengers {
 
     private String phoneNumber;
 
-    //    ;Getters & Setters - - - -
+    //    Getters & Setters - - - -
     public long getId() {
         return id;
     }

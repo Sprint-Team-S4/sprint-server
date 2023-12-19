@@ -30,11 +30,9 @@ public class AircraftService {
         return aircraftRepository.save(aircraft);
     }
 
-    public Aircraft updateAircraft(Long id, Aircraft aircraftDetails) {
+    public Aircraft updateAircraft(Long id) {
         Aircraft aircraft = aircraftRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Aircraft not found for this id :: " + id));
-        aircraft.setAirline(aircraftDetails.getAirline());
-        aircraft.setAirports(aircraftDetails.getAirports());
         return aircraftRepository.save(aircraft);
     }
 
