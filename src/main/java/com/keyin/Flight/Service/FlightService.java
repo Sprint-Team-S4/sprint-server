@@ -1,6 +1,5 @@
 package com.keyin.Flight.Service;
 
-import com.keyin.City.City;
 import com.keyin.Flight.Flight;
 import com.keyin.Flight.Repository.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +35,6 @@ public class FlightService {
                 .orElseThrow(() -> new RuntimeException("Flight not found for this id :: " + id));
         flight.setFlightStatus(flightDetails.getFlightStatus());
         flight.setFlightNumber(flightDetails.getFlightNumber());
-        flight.setCity(flightDetails.getCity());
         flight.setAirport(flightDetails.getAirport());
         flight.setAirline(flightDetails.getAirline());
         flight.setGate(flightDetails.getGate());
@@ -47,5 +45,13 @@ public class FlightService {
 
     public void deleteFlight(Long id) {
         flightRepository.deleteById(id);
+    }
+
+    public List<Flight> findArrivingFlightsByAirport(String airportCode) {
+        return flightRepository.findArrivingFlightsByAirport("Arriving", airportCode);
+    }
+
+    public List<Flight> findDepartingFlightsByAirport(String airportCode) {
+        return flightRepository.findDepartingFlightsByAirport("Departing", airportCode);
     }
 }

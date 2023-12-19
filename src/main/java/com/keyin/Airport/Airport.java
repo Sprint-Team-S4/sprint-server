@@ -13,7 +13,7 @@ public class Airport {
     //    ;Primary Key & Fields - - - -
     @Id
     @NotNull
-    @SequenceGenerator(name = "airport_sequence", sequenceName = "airport_sequence", allocationSize = 1, initialValue=2)
+    @SequenceGenerator(name = "airport_sequence", sequenceName = "airport_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "airport_sequence")
     private long id;
 

@@ -346,12 +346,6 @@ public class DataLoader implements ApplicationEvent {
         Airport airport4 = airportRepository.findById(4L).orElse(new Airport());
         Airport airport5 = airportRepository.findById(5L).orElse(new Airport());
 
-        City city1 = cityRepository.findById(1L).orElse(new City());
-        City city2 = cityRepository.findById(2L).orElse(new City());
-        City city3 = cityRepository.findById(3L).orElse(new City());
-        City city4 = cityRepository.findById(4L).orElse(new City());
-        City city5 = cityRepository.findById(5L).orElse(new City());
-
         Gate gate1 = gateRepository.findById(1L).orElse(new Gate());
         Gate gate2 = gateRepository.findById(2L).orElse(new Gate());
         Gate gate3 = gateRepository.findById(3L).orElse(new Gate());
@@ -377,7 +371,6 @@ public class DataLoader implements ApplicationEvent {
         flight1.setAircraft(aircraft1);
         flight1.setAirline(airline1);
         flight1.setAirport(airport1);
-        flight1.setCity(city1);
         flight1.setGate(gate1);
         flight1.setPassengers(List.of(passenger1, passenger2));
 
@@ -389,7 +382,6 @@ public class DataLoader implements ApplicationEvent {
         flight2.setAircraft(aircraft2);
         flight2.setAirline(airline2);
         flight2.setAirport(airport2);
-        flight2.setCity(city2);
         flight2.setGate(gate2);
         flight2.setPassengers(List.of(passenger3, passenger4, passenger5, passenger6));
 
@@ -401,7 +393,6 @@ public class DataLoader implements ApplicationEvent {
         flight3.setAircraft(aircraft3);
         flight3.setAirline(airline3);
         flight3.setAirport(airport3);
-        flight3.setCity(city3);
         flight3.setGate(gate3);
         flight3.setPassengers(List.of(passenger7, passenger8));
 
@@ -413,7 +404,6 @@ public class DataLoader implements ApplicationEvent {
         flight4.setAircraft(aircraft4);
         flight4.setAirline(airline4);
         flight4.setAirport(airport4);
-        flight4.setCity(city4);
         flight4.setGate(gate4);
         flight4.setPassengers(List.of(passenger9));
 
@@ -425,7 +415,6 @@ public class DataLoader implements ApplicationEvent {
         flight5.setAircraft(aircraft5);
         flight5.setAirline(airline5);
         flight5.setAirport(airport5);
-        flight5.setCity(city5);
         flight5.setGate(gate5);
         flight5.setPassengers(List.of(passenger10));
 

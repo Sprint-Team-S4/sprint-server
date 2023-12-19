@@ -153,4 +153,17 @@ public class FlightController {
         flightService.deleteFlight(id);
         return ResponseEntity.noContent().build();
     }
+
+    // ;Find all arriving flights by Airport
+    @GetMapping("/arriving/{airportCode}")
+    public ResponseEntity<List<Flight>> getArrivingFlightsByAirport(@PathVariable String airportCode) {
+        List<Flight> flights = flightService.findArrivingFlightsByAirport(airportCode);
+        return ResponseEntity.ok(flights);
+    }
+
+    @GetMapping("/departing/{airportCode}")
+    public ResponseEntity<List<Flight>> getDepartingFlightsByAirport(@PathVariable String airportCode) {
+        List<Flight> flights = flightService.findDepartingFlightsByAirport(airportCode);
+        return ResponseEntity.ok(flights);
+    }
 }

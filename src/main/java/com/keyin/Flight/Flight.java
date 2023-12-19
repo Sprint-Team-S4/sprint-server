@@ -3,7 +3,6 @@ package com.keyin.Flight;
 import com.keyin.Aircraft.Aircraft;
 import com.keyin.Airline.Airline;
 import com.keyin.Airport.Airport;
-import com.keyin.City.City;
 import com.keyin.Gate.Gate;
 import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
@@ -14,10 +13,10 @@ import java.util.List;
 @Entity
 public class Flight {
 
-//    ;Primary Key & Fields - - - -
+//    Primary Key & Fields - - - -
     @Id
     @NotNull
-    @SequenceGenerator(name = "flight_sequence", sequenceName = "flight_sequence", allocationSize = 1, initialValue = 2)
+    @SequenceGenerator(name = "flight_sequence", sequenceName = "flight_sequence", allocationSize = 1, initialValue = 1)
     @GeneratedValue(generator = "flight_sequence")
     private long id;
 
@@ -27,9 +26,7 @@ public class Flight {
     @NotNull
     private String flightNumber;
 
-//    ;Relationships - - - -
-    @ManyToOne
-    private City city;
+//    Relationships - - - -
 
     @ManyToOne
     private Airport airport;
@@ -46,21 +43,13 @@ public class Flight {
     @ManyToMany
     private List<Passengers> passengers;
 
-//    ;Getters & Setters - - - -
+//    Getters & Setters - - - -
     public long getId() {
         return id;
     }
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
     }
 
     public Airport getAirport() {
