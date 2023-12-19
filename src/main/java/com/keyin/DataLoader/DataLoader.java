@@ -17,13 +17,14 @@ import com.keyin.Gate.Repository.GateRepository;
 import com.keyin.Passengers.Passengers;
 import com.keyin.Passengers.Repository.PassengersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class DataLoader implements ApplicationEvent {
+public class DataLoader implements ApplicationListener<ContextRefreshedEvent> {
 
     //    ;Repository - - - -
     private final AdminRepository adminRepository;
