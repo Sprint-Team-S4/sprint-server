@@ -1,40 +1,32 @@
 package com.keyin.Airport;
 
-import com.keyin.Gate.Gate;
+import com.keyin.Gate.Gates;
 import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
 import com.keyin.City.City;
+import com.keyin.Flight.Flight;
 
 import java.util.List;
 
 @Entity
 public class Airport {
-
-    //    ;Primary Key & Fields - - - -
     @Id
-    @SequenceGenerator(name = "airport_sequence", sequenceName = "airport_sequence", allocationSize = 1, initialValue=2)
+    @SequenceGenerator(name = "airport_sequence", sequenceName = "airport_sequence",allocationSize = 1,initialValue = 1)
     @GeneratedValue(generator = "airport_sequence")
-    private long id;
+    private Long id;
 
     private String name;
 
     private String code;
 
-    //    ;Relationships - - - -
-    @ManyToOne
+    @OneToOne
     private City city;
 
     @OneToMany
-    private List<Gate> gates;
+    private List<Gates> gates;
 
-    //    ;Getters & Setters - - - -
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
+    @OneToMany
+    private List<Flight> flights;
 
     public String getName() {
         return name;
@@ -46,6 +38,22 @@ public class Airport {
 
     public String getCode() {
         return code;
+    }
+
+    public void setCode() {
+        this.code = code;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public void setCode(String code) {
@@ -60,11 +68,19 @@ public class Airport {
         this.city = city;
     }
 
-    public List<Gate> getGates() {
+    public List<Gates> getGates() {
         return gates;
     }
 
-    public void setGates(List<Gate> gates) {
+    public void setGates(List<Gates> gates) {
         this.gates = gates;
+    }
+
+    public List<Flight> getFlights() {
+        return flights;
+    }
+
+    public void setFlights(List<Flight> flights) {
+        this.flights = flights;
     }
 }

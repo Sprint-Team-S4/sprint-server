@@ -1,57 +1,39 @@
 package com.keyin.City;
 
-import com.keyin.Airport.Airport;
 import jakarta.persistence.*;
-
-import java.util.List;
 
 @Entity
 public class City {
-
-    //    ;Primary Key & Fields - - - -
     @Id
-    @SequenceGenerator(name = "city_sequence", sequenceName = "city_sequence", allocationSize = 1, initialValue=1)
+    @SequenceGenerator(name = "city_sequence", sequenceName = "city_sequence",allocationSize = 1,initialValue = 1)
     @GeneratedValue(generator = "city_sequence")
-    private long id;
+    private Long id;
 
-    private String name;
+    private String cityname;
 
-    private String country;
+    private String province;
 
-    //    ;Relationships - - - -
-    @OneToMany
-    private List<Airport> airports;
-
-    //    ;Getters & Setters - - - -
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCityname() {
+        return cityname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCityname(String cityname) {
+        this.cityname = cityname;
     }
 
-    public String getCountry() {
-        return country;
+    public String getProvince() {
+        return province;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public List<Airport> getAirports() {
-        return airports;
-    }
-
-    public void setAirports(List<Airport> airports) {
-        this.airports = airports;
+    public void setProvince(String province) {
+        this.province = province;
     }
 }

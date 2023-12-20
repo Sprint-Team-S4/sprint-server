@@ -1,4 +1,4 @@
-package com.keyin.Admin.Repository;
+package com.keyin.Admin;
 
 import com.keyin.Admin.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,51 +1,61 @@
 package com.keyin.Passengers;
 
 import jakarta.persistence.*;
+import com.keyin.City.City;
 
 @Entity
 public class Passengers {
-    //    ;Primary Key & Fields - - - -
     @Id
-    @SequenceGenerator(name = "passenger_sequence", sequenceName = "passenger_sequence", allocationSize = 1, initialValue=1)
+    @SequenceGenerator(name = "passenger_sequence", sequenceName = "passenger_sequence",allocationSize = 1,initialValue = 1)
     @GeneratedValue(generator = "passenger_sequence")
-    private long id;
+    private Long id;
 
-    private String firstName;
+    private String firstname;
 
-    private String lastName;
+    private String lastname;
 
-    private String phoneNumber;
+    private String phone;
 
-    //    ;Getters & Setters - - - -
-    public long getId() {
+    @OneToOne
+    private City hometown;
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public City getHometown() {
+        return hometown;
+    }
+
+    public void setHometown(City hometown) {
+        this.hometown = hometown;
     }
 }

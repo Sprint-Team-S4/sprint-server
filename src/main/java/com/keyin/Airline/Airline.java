@@ -1,57 +1,47 @@
 package com.keyin.Airline;
 
-import com.keyin.Aircraft.Aircraft;
 import jakarta.persistence.*;
-import java.util.List;
 
 @Entity
 public class Airline {
-
-    //    ;Primary Key & Fields - - - -
     @Id
-    @SequenceGenerator(name = "airline_sequence", sequenceName = "airline_sequence", allocationSize = 1, initialValue=1)
+    @SequenceGenerator(name = "airline_sequence", sequenceName = "airline_sequence",allocationSize = 1,initialValue = 1)
     @GeneratedValue(generator = "airline_sequence")
-    private long id;
+    private Long id;
 
-    private String airlineName;
+    private String airlineCode;
+    private String name;
+    private String country;
 
-    private String contactEmail;
-
-    //    ;Relationships - - - -
-    @OneToMany
-    private List<Aircraft> aircrafts;
-
-    //    ;Getters & Setters - - - -
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
-
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getAirlineName() {
-        return airlineName;
+    public String getAirlineCode() {
+        return airlineCode;
     }
 
-    public void setAirlineName(String airlineName) {
-        this.airlineName = airlineName;
+    public void setAirlineCode(String airlineCode) {
+        this.airlineCode = airlineCode;
     }
 
-    public String getContactEmail() {
-        return contactEmail;
+    public String getName() {
+        return name;
     }
 
-    public void setContactEmail(String contactEmail) {
-        this.contactEmail = contactEmail;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public List<Aircraft> getAircrafts() {
-        return aircrafts;
+    public String getCountry() {
+        return country;
     }
 
-    public void setAircrafts(List<Aircraft> aircrafts) {
-        this.aircrafts = aircrafts;
+    public void setCountry(String country) {
+        this.country = country;
     }
 }

@@ -1,7 +1,7 @@
 version: '3'
 services:
   database:
-    image: username/sprintserver:latest
+    image: joshy271/sprintserver:latest
     ports:
       - 8080:8080
     environment:
