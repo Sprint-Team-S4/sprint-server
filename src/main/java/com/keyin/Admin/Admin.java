@@ -15,6 +15,12 @@ public class Admin {
     @NotNull
     private String username;
 
+    public Admin(long id, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
+
     @NotNull
     private String password;
 

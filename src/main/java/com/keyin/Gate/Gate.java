@@ -25,6 +25,13 @@ public class Gate {
     @JoinColumn(name = "airport_id")
     private Airport airport;
 
+    public Gate(long id, String gateNumber, String terminalNum, Airport airport) {
+        this.id = id;
+        this.gateNumber = gateNumber;
+        this.terminalNum = terminalNum;
+        this.airport = airport;
+    }
+
     //    Getters & Setters - - - -
     public long getId() {
         return id;

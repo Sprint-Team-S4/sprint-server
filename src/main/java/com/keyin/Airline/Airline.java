@@ -27,6 +27,13 @@ public class Airline {
     @OneToMany(mappedBy = "airline", cascade = CascadeType.ALL)
     private List<Aircraft> aircrafts = new ArrayList<>();
 
+    public Airline(long id, String airlineName, String contactEmail, List<Aircraft> aircrafts) {
+        this.id = id;
+        this.airlineName = airlineName;
+        this.contactEmail = contactEmail;
+        this.aircrafts = aircrafts;
+    }
+
     //    Getters & Setters - - - -
     public long getId() {
         return id;

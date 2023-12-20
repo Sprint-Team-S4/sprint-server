@@ -20,6 +20,13 @@ public class Passengers {
 
     private String phoneNumber;
 
+    public Passengers(long id, String firstName, String lastName, String phoneNumber) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+    }
+
     //    Getters & Setters - - - -
     public long getId() {
         return id;

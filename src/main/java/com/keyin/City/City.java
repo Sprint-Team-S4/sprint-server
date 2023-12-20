@@ -26,6 +26,13 @@ public class City {
     @OneToMany(mappedBy = "city", cascade = CascadeType.PERSIST)
     private List<Airport> airports = new ArrayList<>();
 
+    public City(long id, String name, String country, List<Airport> airports) {
+        this.id = id;
+        this.name = name;
+        this.country = country;
+        this.airports = airports;
+    }
+
     //    Getters & Setters - - - -
     public long getId() {
         return id;

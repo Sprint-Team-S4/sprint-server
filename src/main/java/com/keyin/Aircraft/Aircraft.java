@@ -17,6 +17,11 @@ public class Aircraft {
     @JoinColumn(name = "airline_id")
     private Airline airline;
 
+    public Aircraft(long id, Airline airline) {
+        this.id = id;
+        this.airline = airline;
+    }
+
     //    Getters & Setters - - - -
     public long getId() {
         return id;

@@ -42,6 +42,16 @@ public class Flight {
     @JoinColumn(name = "flight_id")
     private List<Passengers> passengers = new ArrayList<>();
 
+    public Flight(long id, String flightStatus, String flightNumber, Airport airport, Gate gate, Aircraft aircraft, List<Passengers> passengers) {
+        this.id = id;
+        this.flightStatus = flightStatus;
+        this.flightNumber = flightNumber;
+        this.airport = airport;
+        this.gate = gate;
+        this.aircraft = aircraft;
+        this.passengers = passengers;
+    }
+
     //    Getters & Setters - - - -
     public long getId() {
         return id;

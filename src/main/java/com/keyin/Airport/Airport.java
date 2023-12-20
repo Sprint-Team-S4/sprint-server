@@ -31,6 +31,14 @@ public class Airport {
     @OneToMany(mappedBy = "airport", cascade = CascadeType.ALL)
     private List<Gate> gates = new ArrayList<>();
 
+    public Airport(long id, String name, String code, City city, List<Gate> gates) {
+        this.id = id;
+        this.name = name;
+        this.code = code;
+        this.city = city;
+        this.gates = gates;
+    }
+
     //    Getters & Setters - - - -
     public long getId() {
         return id;

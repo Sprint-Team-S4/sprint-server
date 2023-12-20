@@ -45,7 +45,6 @@ public class AirlineController {
                 .orElseThrow(() -> new RuntimeException("Airline not found for this id :: " + id));
         return ResponseEntity.ok(airline);
     }
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteAirline(@PathVariable Long id) {
         airlineService.deleteAirline(id);
