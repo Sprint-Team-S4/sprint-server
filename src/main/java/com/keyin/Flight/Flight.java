@@ -15,8 +15,10 @@ public class Flight {
 
     //    Primary Key & Fields - - - -
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "flight_sequence", sequenceName = "flight_sequence", allocationSize = 1, initialValue = 1)
+    @GeneratedValue(generator = "flight_sequence")
     private long id;
+
 
     @NotNull
     private String flightStatus; // Arriving/Departing

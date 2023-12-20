@@ -24,7 +24,13 @@ In order to run this program locally, you are going to need:
 - Run the command: docker push kaylvigh/sprintserver:latest
 - Run the command: docker-compose up
 
-# TO-DO LIST
+docker build -t kaylvigh/sprintserver .
+docker push kaylvigh/sprintserver:latest
+docker-compose up
 
-- Add "Flight" entity
-- Complete controllers
+# database refresh
+
+mysql -u root -p
+Gosthatsit2
+DROP DATABASE finalsprint;
+CREATE DATABASE finalsprint;

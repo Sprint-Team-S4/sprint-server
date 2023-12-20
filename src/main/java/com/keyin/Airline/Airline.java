@@ -12,8 +12,10 @@ public class Airline {
 
     //    Primary Key & Fields - - - -
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "airline_sequence", sequenceName = "airline_sequence", allocationSize = 1, initialValue = 1)
+    @GeneratedValue(generator = "airline_sequence")
     private long id;
+
 
     @NotNull
     private String airlineName;

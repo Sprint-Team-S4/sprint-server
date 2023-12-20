@@ -12,7 +12,8 @@ public class City {
 
     //    Primary Key & Fields - - - -
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "city_sequence", sequenceName = "city_sequence", allocationSize = 1, initialValue = 1)
+    @GeneratedValue(generator = "city_sequence")
     private long id;
 
     @NotNull
@@ -22,7 +23,7 @@ public class City {
     private String country;
 
     //    Relationships - - - -
-    @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "city", cascade = CascadeType.PERSIST)
     private List<Airport> airports = new ArrayList<>();
 
     //    Getters & Setters - - - -

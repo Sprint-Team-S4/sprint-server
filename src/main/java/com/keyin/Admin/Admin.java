@@ -8,7 +8,8 @@ public class Admin {
 
     //    Primary Key & Fields - - - -
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "admin_sequence", sequenceName = "admin_sequence", allocationSize = 1, initialValue = 1)
+    @GeneratedValue(generator = "admin_sequence")
     private long id;
 
     @NotNull

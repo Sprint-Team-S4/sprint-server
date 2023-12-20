@@ -2,20 +2,18 @@ package com.keyin.Aircraft;
 
 import com.keyin.Airline.Airline;
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
-
-import java.util.List;
 
 @Entity
 public class Aircraft {
 
     //    Primary Key & Fields - - - -
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence",allocationSize = 1,initialValue = 1)
+    @GeneratedValue(generator = "aircraft_sequence")
     private long id;
 
     //    Relationships - - - -
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "airline_id")
     private Airline airline;
 
@@ -35,5 +33,4 @@ public class Aircraft {
     public void setAirline(Airline airline) {
         this.airline = airline;
     }
-
 }

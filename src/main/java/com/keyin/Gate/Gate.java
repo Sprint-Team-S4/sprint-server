@@ -9,7 +9,8 @@ public class Gate {
 
     //    Primary Key & Fields - - - -
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "gate_sequence", sequenceName = "gate_sequence", allocationSize = 1, initialValue = 1)
+    @GeneratedValue(generator = "gate_sequence")
     private long id;
 
     @NotNull
@@ -20,7 +21,7 @@ public class Gate {
 
     //    Relationships - - - -
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "airport_id")
     private Airport airport;
 

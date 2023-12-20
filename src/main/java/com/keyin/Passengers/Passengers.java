@@ -8,7 +8,8 @@ public class Passengers {
 
     //    Primary Key & Fields - - - -
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "passengers_sequence", sequenceName = "passengers_sequence", allocationSize = 1, initialValue = 1)
+    @GeneratedValue(generator = "passengers_sequence")
     private long id;
 
     @NotNull

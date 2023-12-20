@@ -13,7 +13,8 @@ public class Airport {
 
     //    Primary Key & Fields - - - -
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = "airport_sequence", sequenceName = "airport_sequence", allocationSize = 1, initialValue = 1)
+    @GeneratedValue(generator = "airport_sequence")
     private long id;
 
     @NotNull
@@ -24,6 +25,7 @@ public class Airport {
 
     //    Relationships - - - -
     @ManyToOne
+    @JoinColumn(name = "city_id", nullable = true)
     private City city;
 
     @OneToMany(mappedBy = "airport", cascade = CascadeType.ALL)
