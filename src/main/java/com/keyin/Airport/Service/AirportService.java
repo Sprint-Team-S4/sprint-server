@@ -44,51 +44,5 @@ public class AirportService {
 
         return airportRepository.save(airport);
     }
-
-    public List<Airport> initializeAirports() {
-        List<Airport> airports = new ArrayList<>();
-
-        // AIRPORT 1
-        Airport airport1 = new Airport();
-        airport1.setName("St. John's Airport");
-        airport1.setCode("YYT");
-        airport1.setCity(null);
-        airport1.setGates(null);
-        airports.add(airport1);
-
-        // AIRPORT 2
-        Airport airport2 = new Airport();
-        airport2.setName("Toronto Airport");
-        airport2.setCode("YYZ");
-        airport2.setCity(null);
-        airport2.setGates(null);
-        airports.add(airport2);
-
-        // AIRPORT 3
-        Airport airport3 = new Airport();
-        airport3.setName("Keflavik Airport");
-        airport3.setCode("KEF");
-        airport3.setCity(null);
-        airport3.setGates(null);
-        airports.add(airport3);
-
-        // AIRPORT 4
-        Airport airport4 = new Airport();
-        airport4.setName("Dulles International Airport");
-        airport4.setCode("IAD");
-        airport4.setCity(null);
-        airport4.setGates(null);
-        airports.add(airport4);
-
-        // AIRPORT 5
-        Airport airport5 = new Airport();
-        airport5.setName("Stockholm Arlanda Airport");
-        airport5.setCode("ARN");
-        airport5.setCity(null);
-        airport5.setGates(null);
-        airports.add(airport5);
-
-        return airportRepository.saveAll(airports);
-    }
 }
 

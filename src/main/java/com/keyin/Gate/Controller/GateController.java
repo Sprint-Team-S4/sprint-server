@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/gate")
+@CrossOrigin
 public class GateController {
 
     private final GateService gateService;
