@@ -19,7 +19,6 @@ public class Flight {
     @GeneratedValue(generator = "flight_sequence")
     private long id;
 
-
     @NotNull
     private String flightStatus; // Arriving/Departing
 
