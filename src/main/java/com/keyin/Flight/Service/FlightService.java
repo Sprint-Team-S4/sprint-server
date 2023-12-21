@@ -39,6 +39,7 @@ public class FlightService {
         flight.setGate(flightDetails.getGate());
         flight.setAircraft(flightDetails.getAircraft());
         flight.setPassengers(flightDetails.getPassengers());
+        flight.setAirline(flightDetails.getAirline());
         return flightRepository.save(flight);
     }
 
