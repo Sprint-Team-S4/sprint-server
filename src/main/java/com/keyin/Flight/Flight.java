@@ -1,6 +1,7 @@
 package com.keyin.Flight;
 
 import com.keyin.Aircraft.Aircraft;
+import com.keyin.Airline.Airline;
 import com.keyin.Airport.Airport;
 import com.keyin.Gate.Gate;
 import com.keyin.Passengers.Passengers;
@@ -35,6 +36,10 @@ public class Flight {
     @JoinColumn(name = "aircraft_id")
     private Aircraft aircraft;
 
+    @ManyToOne
+    @JoinColumn(name = "airline_id")
+    private Airline airline;
+
     @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "flight_id")
     private List<Passengers> passengers = new ArrayList<>();
@@ -42,7 +47,7 @@ public class Flight {
     //    Constructors - - - -
     public Flight() {}
 
-    public Flight(long id, String flightStatus, String flightNumber, Airport airport, Gate gate, Aircraft aircraft, List<Passengers> passengers) {
+    public Flight(long id, String flightStatus, String flightNumber, Airport airport, Gate gate, Aircraft aircraft, List<Passengers> passengers, Airline airline) {
         this.id = id;
         this.flightStatus = flightStatus;
         this.flightNumber = flightNumber;
@@ -50,6 +55,7 @@ public class Flight {
         this.gate = gate;
         this.aircraft = aircraft;
         this.passengers = passengers;
+        this.airline = airline;
     }
 
     //    Getters & Setters - - - -
@@ -107,5 +113,13 @@ public class Flight {
 
     public void setAircraft(Aircraft aircraft) {
         this.aircraft = aircraft;
+    }
+
+    public Airline getAirline() {
+        return airline;
+    }
+
+    public void setAirline(Airline airline) {
+        this.airline = airline;
     }
 }
