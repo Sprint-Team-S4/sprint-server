@@ -64,4 +64,16 @@ public class FlightController {
         List<Flight> flights = flightService.findDepartingFlightsByAirport(airportCode);
         return ResponseEntity.ok(flights);
     }
+
+    @GetMapping("/arriving")
+    public ResponseEntity<List<Flight>> getAllArrivingFlights() {
+        List<Flight> flights = flightService.findAllArrivingFlights();
+        return ResponseEntity.ok(flights);
+    }
+
+    @GetMapping("/departing")
+    public ResponseEntity<List<Flight>> getAllDepartingFlights() {
+        List<Flight> flights = flightService.findAllDepartingFlights();
+        return ResponseEntity.ok(flights);
+    }
 }
