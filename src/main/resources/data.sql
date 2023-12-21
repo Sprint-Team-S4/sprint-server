@@ -5,16 +5,16 @@ INSERT INTO finalsprint.admin (id, username, password)
 VALUES (2, 'Admin2', 'Adminpass');
 
 -- AIRLINE
-INSERT INTO finalsprint.airline (id, airline_name, contact_email)
-VALUES (1, 'Air Canada', 'contact@aircanada.com'),
+INSERT INTO finalsprint.airline (id, airline_name, contact_email) VALUES
+(1, 'Air Canada', 'contact@aircanada.com'),
 (2, 'West Jet', 'contact@westjet.com'),
 (3, 'JetBlue', 'contact@jetblue.com'),
 (4, 'Southwest Airlines', 'contact@southwest.com'),
 (5, 'Scandinavian Airlines', 'contact@flysas.com');
 
 -- AIRCRAFT
-INSERT INTO finalsprint.aircraft (id, airline_id)
-VALUES (1, 1),
+INSERT INTO finalsprint.aircraft (id, airline_id) VALUES
+(1, 1),
 (2, 2),
 (3, 3),
 (4, 4),
