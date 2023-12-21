@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/gate")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class GateController {
 
     private final GateService gateService;

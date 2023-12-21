@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/flight")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class FlightController {
 
     private final FlightService flightService;
@@ -27,8 +27,6 @@ public class FlightController {
         return ResponseEntity.ok(flights);
     }
 
-
-
     @GetMapping("/{id}")
     public ResponseEntity<Flight> getFlightById(@PathVariable Long id) {
         Flight flight = flightService.getFlightById(id)
@@ -36,10 +34,10 @@ public class FlightController {
         return ResponseEntity.ok(flight);
     }
 
-    @PostMapping
-    public ResponseEntity<Flight> createFlight(@Valid @RequestBody Flight flight) {
-        Flight newFlight = flightService.saveFlight(flight);
-        return ResponseEntity.ok(newFlight);
+    @PostMapping("/create")
+    public ResponseEntity<Flight> createFlight(@RequestBody Flight flight) {
+        Flight createdFlight = flightService.createFlight(flight);
+        return ResponseEntity.ok(createdFlight);
     }
 
     @PutMapping("/{id}")

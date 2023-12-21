@@ -62,4 +62,8 @@ public class FlightService {
     public List<Flight> findAllDepartingFlights() {
         return flightRepository.findAllDepartingFlights();
     }
+
+    public Flight createFlight(Flight flight) {
+        return flightRepository.save(flight);
+    }
 }
