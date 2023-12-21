@@ -17,22 +17,30 @@ Option 1: (tool window [view > tool windows > maven])
 
 Option 2: (terminal)
 - Run the command: 
-`mvn clean install`
+`
+mvn clean install
+`
 
 # 3. Terminal
 
 - (To restart database) Run the commands:
-`mysql -u root -p`
+`
+mysql -u root -p
+`
 password:
 Gosthatsit2
-`DROP DATABASE finalsprint;
+`
+DROP DATABASE finalsprint;
 CREATE DATABASE finalsprint;
-exit`
+exit
+`
 
 - (Docker) Run the commands:
-`docker build -t username/sprintserver .
-docker push username/sprintserver:latest
-docker-compose up`
+`
+docker build -t kaylvigh/sprintserver .
+docker push kaylvigh/sprintserver:latest
+docker-compose up
+`
 
 # 4. Inject Data into Database
 
