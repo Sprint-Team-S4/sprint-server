@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8423c37c-385f-4c2c-adb2-995e3a1aab04" name="Changes" comment="Just trying something different with the readme and sql">
+    <list default="true" id="8423c37c-385f-4c2c-adb2-995e3a1aab04" name="Changes" comment="Added airline field to flight!">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Configuration/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Controller/AirportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Controller/AirportController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -48,13 +54,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/kayleighmcgrath/IdeaProjects/sprint-server&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/kayleighmcgrath/IdeaProjects/sprint-server"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.keyin.DataLoader" />
@@ -157,10 +164,19 @@
       <option name="project" value="LOCAL" />
       <updated>1703125696431</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added airline field to flight!">
+      <option name="closed" value="true" />
+      <created>1703130297925</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703130297925</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="(workspace fix and merge fix)" />
     <MESSAGE value="Merge remote-tracking branch 'origin/Kayleigh-DB-Change-Test' into Kayleigh-DB-Change-Test" />
     <MESSAGE value="Changed things up again, starting a different way of injecting data, the readme is a little messed up now but the dockerization works again" />
@@ -170,6 +186,7 @@
     <MESSAGE value="Fixed controllers" />
     <MESSAGE value="Latest version. Made it look nicer." />
     <MESSAGE value="Just trying something different with the readme and sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="Just trying something different with the readme and sql" />
+    <MESSAGE value="Added airline field to flight!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added airline field to flight!" />
   </component>
 </project>
