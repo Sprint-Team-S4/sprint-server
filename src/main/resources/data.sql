@@ -1,14 +1,10 @@
---SQL INJECTIONS
+-- SQL INJECTIONS
 
---ADMIN
+-- ADMIN
 INSERT INTO admin (id, username, password) VALUES
 (1, 'Admin', 'Adminpass');
 
---AIRCRAFT
-INSERT INTO aircraft (id) VALUES
-(1), (2), (3), (4), (5);
-
---AIRLINE
+-- AIRLINE
 INSERT INTO airline (id, airline_name, contact_email) VALUES
 (1, 'Air Canada', 'contact@aircanada.com'),
 (2, 'West Jet', 'contact@westjet.com'),
@@ -16,7 +12,15 @@ INSERT INTO airline (id, airline_name, contact_email) VALUES
 (4, 'Southwest Airlines', 'contact@southwest.com'),
 (5, 'Scandinavian Airlines', 'contact@flysas.com');
 
---CITY
+-- AIRCRAFT
+INSERT INTO aircraft (id, airline_id) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5);
+
+-- CITY
 INSERT INTO city (id, name, country) VALUES
 (1, 'St. Johns', 'Canada'),
 (2, 'Toronto', 'Canada'),
@@ -24,7 +28,7 @@ INSERT INTO city (id, name, country) VALUES
 (4, 'Washington', 'USA'),
 (5, 'Stockholm', 'Sweden');
 
---AIRPORT
+-- AIRPORT
 INSERT INTO airport (id, name, code, city_id) VALUES
 (1, 'St. Johns Airport', 'YYT', (SELECT id FROM city WHERE name = 'St. Johns')),
 (2, 'Toronto Airport', 'YYZ', (SELECT id FROM city WHERE name = 'Toronto')),
@@ -32,8 +36,7 @@ INSERT INTO airport (id, name, code, city_id) VALUES
 (4, 'Dulles International Airport', 'IAD', (SELECT id FROM city WHERE name = 'Washington')),
 (5, 'Stockholm Arlanda Airport', 'ARN', (SELECT id FROM city WHERE name = 'Stockholm'));
 
-
---GATE
+-- GATE
 INSERT INTO gate (id, gate_number, terminal_num, airport_id) VALUES
 (1, 'A1', 'T1', (SELECT id FROM airport WHERE name = 'St. Johns Airport')),
 (2, 'B1', 'T1', (SELECT id FROM airport WHERE name = 'Toronto Airport')),
@@ -41,8 +44,7 @@ INSERT INTO gate (id, gate_number, terminal_num, airport_id) VALUES
 (4, 'D1', 'T1', (SELECT id FROM airport WHERE name = 'Dulles International Airport')),
 (5, 'E1', 'T1', (SELECT id FROM airport WHERE name = 'Stockholm Arlanda Airport'));
 
-
---PASSENGERS
+-- PASSENGERS
 INSERT INTO passengers (id, first_name, last_name, phone_number) VALUES
 (1, 'Kayleigh', 'McGrath', '709-123-4567'),
 (2, 'Jonathan', 'Ivany', '709-456-7890'),
@@ -55,10 +57,10 @@ INSERT INTO passengers (id, first_name, last_name, phone_number) VALUES
 (9, 'Elizabeth', 'Wilson', '709-432-1098'),
 (10, 'Matthew', 'Moore', '709-890-1234');
 
---FLIGHT
+-- FLIGHT
 INSERT INTO flight (id, flight_status, flight_number, aircraft_id, airport_id, gate_id) VALUES
-(1, 'Arriving', 'AC690', 1, (SELECT id FROM airport WHERE name = 'St. Johns Airport'), (SELECT id FROM gate WHERE gate_number = 'A1')),
-(2, 'Departing', 'WJ520', 2, (SELECT id FROM airport WHERE name = 'Toronto Airport'), (SELECT id FROM gate WHERE gate_number = 'B1'));
-(3, 'Departing', 'JB420', 3, (SELECT id FROM airport WHERE name = 'Keflavik Airport'), (SELECT id FROM gate WHERE gate_number = 'C1'));
-(4, 'Departing', 'JB420', 4, (SELECT id FROM airport WHERE name = 'Dulles International Airport'), (SELECT id FROM gate WHERE gate_number = 'D1'));
-(5, 'Departing', 'JB420', 5, (SELECT id FROM airport WHERE name = 'Stockholm Arlanda Airport'), (SELECT id FROM gate WHERE gate_number = 'E1'));
+(1, 'Arriving', 'AC420', 1, (SELECT id FROM airport WHERE name = 'St. Johns Airport'), (SELECT id FROM gate WHERE gate_number = 'A1')),
+(2, 'Departing', 'WJ420', 2, (SELECT id FROM airport WHERE name = 'Toronto Airport'), (SELECT id FROM gate WHERE gate_number = 'B1')),
+(3, 'Arriving', 'JB420', 3, (SELECT id FROM airport WHERE name = 'Keflavik Airport'), (SELECT id FROM gate WHERE gate_number = 'C1')),
+(4, 'Departing', 'SW420', 4, (SELECT id FROM airport WHERE name = 'Dulles International Airport'), (SELECT id FROM gate WHERE gate_number = 'D1')),
+(5, 'Arriving', 'SA420', 5, (SELECT id FROM airport WHERE name = 'Stockholm Arlanda Airport'), (SELECT id FROM gate WHERE gate_number = 'E1'));

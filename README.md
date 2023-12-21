@@ -34,3 +34,4 @@ mysql -u root -p
 Gosthatsit2
 DROP DATABASE finalsprint;
 CREATE DATABASE finalsprint;
+exit
