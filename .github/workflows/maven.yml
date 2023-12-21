@@ -16,9 +16,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "S4-main" ]
+    branches: [ "S4-sprint" ]
   pull_request:
-    branches: [ "S4-main" ]
+    branches: [ "S4-sprint" ]
 
 
 
