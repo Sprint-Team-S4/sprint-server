@@ -27,6 +27,8 @@ public class FlightController {
         return ResponseEntity.ok(flights);
     }
 
+
+
     @GetMapping("/{id}")
     public ResponseEntity<Flight> getFlightById(@PathVariable Long id) {
         Flight flight = flightService.getFlightById(id)

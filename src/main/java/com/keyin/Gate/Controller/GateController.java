@@ -59,4 +59,12 @@ public class GateController {
         gateService.deleteGate(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/byAirport/{airportId}")
+    public ResponseEntity<List<Gate>> getGatesByAirport(@PathVariable Long airportId) {
+        List<Gate> gates = gateService.getGatesByAirportId(airportId);
+        return ResponseEntity.ok(gates);
+    }
 }
+
+

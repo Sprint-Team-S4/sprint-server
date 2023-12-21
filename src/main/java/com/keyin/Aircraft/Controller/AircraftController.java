@@ -51,4 +51,10 @@ public class AircraftController {
         aircraftService.deleteAircraft(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/byAirline/{airlineId}")
+    public ResponseEntity<List<Aircraft>> getAircraftByAirline(@PathVariable Long airlineId) {
+        List<Aircraft> aircrafts = aircraftService.getAircraftByAirlineId(airlineId);
+        return ResponseEntity.ok(aircrafts);
+    }
 }
