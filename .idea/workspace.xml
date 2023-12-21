@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8423c37c-385f-4c2c-adb2-995e3a1aab04" name="Changes" comment="Added a Cors Config file, tested it and it seems to have worked?">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="8423c37c-385f-4c2c-adb2-995e3a1aab04" name="Changes" comment="Slightly redid how flight creation is mapped (it is now under flight/create)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Controller/AirlineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Controller/AirlineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Controller/AirportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Controller/AirportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/CityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Repository/FlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Repository/FlightRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Service/FlightService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Controller/GateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Controller/GateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Controller/PassengersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Controller/PassengersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703141377959</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Slightly redid how flight creation is mapped (it is now under flight/create)">
+      <option name="closed" value="true" />
+      <created>1703163020741</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703163020741</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -211,6 +226,7 @@
     <MESSAGE value="Just trying something different with the readme and sql" />
     <MESSAGE value="Added airline field to flight!" />
     <MESSAGE value="Added a Cors Config file, tested it and it seems to have worked?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a Cors Config file, tested it and it seems to have worked?" />
+    <MESSAGE value="Slightly redid how flight creation is mapped (it is now under flight/create)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slightly redid how flight creation is mapped (it is now under flight/create)" />
   </component>
 </project>

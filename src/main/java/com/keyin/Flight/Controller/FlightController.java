@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/flight")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class FlightController {
 
     private final FlightService flightService;
@@ -76,6 +76,4 @@ public class FlightController {
         List<Flight> flights = flightService.findAllDepartingFlights();
         return ResponseEntity.ok(flights);
     }
-
-
 }
