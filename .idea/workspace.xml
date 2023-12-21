@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8423c37c-385f-4c2c-adb2-995e3a1aab04" name="Changes" comment="Added a Cors Config file, tested it and it seems to have worked?">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Repository/AircraftRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Repository/AircraftRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Service/AircraftService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Service/AircraftService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Controller/GateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Controller/GateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Repository/GateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Repository/GateRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Service/GateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Service/GateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Repository/FlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Repository/FlightRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Service/FlightService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +39,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Kayleigh-DB-Change-Test" />
+        <entry key="$PROJECT_DIR$" value="S4-sprint" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,18 +56,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/kayleighmcgrath/IdeaProjects/sprint-server"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kayleighmcgrath/IdeaProjects/sprint-server&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.keyin.DataLoader" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -18,4 +18,12 @@ public interface FlightRepository extends JpaRepository<Flight, Long> {
 //    Find Departing Flights by Airport - - - -
     @Query("SELECT f FROM Flight f WHERE f.flightStatus = :flightStatus AND f.airport.code = :airportCode")
     List<Flight> findDepartingFlightsByAirport(@Param("flightStatus") String flightStatus, @Param("airportCode") String airportCode);
+
+//    Find All Arriving Flights - - - -
+    @Query("SELECT f FROM Flight f WHERE f.flightStatus = 'Arriving'")
+    List<Flight> findAllArrivingFlights();
+
+//    Find All Departing Flights - - - -
+    @Query("SELECT f FROM Flight f WHERE f.flightStatus = 'Departing'")
+    List<Flight> findAllDepartingFlights();
 }
