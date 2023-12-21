@@ -2,6 +2,7 @@ package com.keyin.Airport.Controller;
 
 import com.keyin.Airport.Airport;
 import com.keyin.Airport.Service.AirportService;
+import com.keyin.Gate.Gate;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -50,5 +51,11 @@ public class AirportController {
     public ResponseEntity<Void> deleteAirport(@PathVariable Long id) {
         airportService.deleteAirport(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/{id}/gates")
+    public ResponseEntity<List<Gate>> getGatesByAirportId(@PathVariable Long id) {
+        List<Gate> gates = airportService.findGatesByAirportId(id);
+        return ResponseEntity.ok(gates);
     }
 }

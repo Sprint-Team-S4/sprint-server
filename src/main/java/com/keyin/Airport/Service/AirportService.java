@@ -2,6 +2,7 @@ package com.keyin.Airport.Service;
 
 import com.keyin.Airport.Airport;
 import com.keyin.Airport.Repository.AirportRepository;
+import com.keyin.Gate.Gate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,6 +44,12 @@ public class AirportService {
         airport.setCode(airportDetails.getCode());
 
         return airportRepository.save(airport);
+    }
+
+    public List<Gate> findGatesByAirportId(Long airportId) {
+        Airport airport = airportRepository.findById(airportId)
+                .orElseThrow(() -> new RuntimeException("Airport not found for this id :: " + airportId));
+        return airport.getGates(); // Assuming getGates() method exists in the Airport entity
     }
 }
 
