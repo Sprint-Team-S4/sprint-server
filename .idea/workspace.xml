@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="8423c37c-385f-4c2c-adb2-995e3a1aab04" name="Changes" comment="Slightly redid how flight creation is mapped (it is now under flight/create)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
@@ -17,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Controller/PassengersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Controller/PassengersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +33,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+
     <favorite-branches>
       <branch-storage>
         <map>
@@ -44,6 +47,7 @@
         </map>
       </branch-storage>
     </favorite-branches>
+
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="S4-sprint" />
@@ -55,6 +59,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2Zop6bxDXpPiN4C8yZVYUaGAAso" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -68,7 +75,9 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/kayleighmcgrath/IdeaProjects/sprint-server&quot;
+    &quot;git-widget-placeholder&quot;: &quot;AWS-Prep&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kayleighmcgrath/IdeaProjects/sprint-server&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -77,6 +86,11 @@
     </key>
   </component>
   <component name="RunManager">
+
+    <configuration name="Unnamed" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.keyin.RestApplication" />
+      <module name="Sprint2" />
+
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -84,6 +98,7 @@
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,13 +153,13 @@
       <option name="project" value="LOCAL" />
       <updated>1703102917317</updated>
     </task>
-    <task id="LOCAL-00006" summary="added constructors !!">
+    <task id="LOCAL-00006" summary="Tmr will be fun">
       <option name="closed" value="true" />
-      <created>1703107913829</created>
+      <created>1703138244824</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1703107913829</updated>
+      <updated>1703138244824</updated>
     </task>
     <task id="LOCAL-00007" summary="FIXED THE REPEATING it worked for city, still need to test everything else">
       <option name="closed" value="true" />
@@ -219,6 +234,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/Kayleigh-DB-Change-Test' into Kayleigh-DB-Change-Test" />
     <MESSAGE value="Changed things up again, starting a different way of injecting data, the readme is a little messed up now but the dockerization works again" />
     <MESSAGE value="Added @CrossOrigin to every controller" />
+
     <MESSAGE value="added constructors !!" />
     <MESSAGE value="FIXED THE REPEATING it worked for city, still need to test everything else" />
     <MESSAGE value="Fixed controllers" />
@@ -228,5 +244,6 @@
     <MESSAGE value="Added a Cors Config file, tested it and it seems to have worked?" />
     <MESSAGE value="Slightly redid how flight creation is mapped (it is now under flight/create)" />
     <option name="LAST_COMMIT_MESSAGE" value="Slightly redid how flight creation is mapped (it is now under flight/create)" />
+
   </component>
 </project>

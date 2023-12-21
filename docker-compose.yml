@@ -1,9 +1,11 @@
 version: '3'
 services:
   database:
-    image: kaylvigh/sprintserver:latest
+    image: joshy271/sprintserver:aws
+    build: .
     ports:
       - 8080:8080
     environment:
-#      - spring.datasource.url=jdbc:mysql://host.docker.internal:3306/finalsprint
+      #- spring.datasource.url=jdbc:mysql://host.docker.internal:3306/sprintdb1
       - spring.datasource.url=jdbc:mysql://finalsprintdb.clg84w8e8l49.us-east-1.rds.amazonaws.com/sprintdb1?enableTLSProtocls=TLSv1.2
+
