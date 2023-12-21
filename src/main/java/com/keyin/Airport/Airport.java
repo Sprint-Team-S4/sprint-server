@@ -1,18 +1,19 @@
 package com.keyin.Airport;
 
-import com.keyin.Gate.Gate;
-import com.keyin.Passengers.Passengers;
-import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.keyin.City.City;
+import com.keyin.Gate.Gate;
+import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Airport {
 
-    //    ;Primary Key & Fields - - - -
+    //    Primary Key & Fields - - - -
     @Id
-    @SequenceGenerator(name = "airport_sequence", sequenceName = "airport_sequence", allocationSize = 1, initialValue=2)
+    @SequenceGenerator(name = "airport_sequence", sequenceName = "airport_sequence", allocationSize = 1, initialValue = 1)
     @GeneratedValue(generator = "airport_sequence")
     private long id;
 
@@ -20,14 +21,27 @@ public class Airport {
 
     private String code;
 
-    //    ;Relationships - - - -
+    //    Relationships - - - -
     @ManyToOne
+    @JoinColumn(name = "city_id", nullable = true)
+    @JsonIgnore
     private City city;
 
-    @OneToMany
-    private List<Gate> gates;
+    @OneToMany(mappedBy = "airport", cascade = CascadeType.ALL)
+    private List<Gate> gates = new ArrayList<>();
 
-    //    ;Getters & Setters - - - -
+    //    Constructors - - - -
+    public Airport(){}
+
+    public Airport(long id, String name, String code, City city, List<Gate> gates) {
+        this.id = id;
+        this.name = name;
+        this.code = code;
+        this.city = city;
+        this.gates = gates;
+    }
+
+    //    Getters & Setters - - - -
     public long getId() {
         return id;
     }

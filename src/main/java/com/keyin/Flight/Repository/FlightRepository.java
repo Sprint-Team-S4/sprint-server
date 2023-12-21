@@ -1,6 +1,5 @@
 package com.keyin.Flight.Repository;
 
-import com.keyin.City.City;
 import com.keyin.Flight.Flight;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -12,19 +11,11 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "flight", path = "flight")
 public interface FlightRepository extends JpaRepository<Flight, Long> {
 
-//    ;Find Flights by Airline - - - -
-    @Query("SELECT c FROM Flight c JOIN c.airline p WHERE p.airlineName = :airlineName")
-    List<Flight> findByAirline_Name(@Param("airlineName") String airlineName);
+//    Find Arriving Flights by Airport - - - -
+    @Query("SELECT f FROM Flight f WHERE f.flightStatus = :flightStatus AND f.airport.code = :airportCode")
+    List<Flight> findArrivingFlightsByAirport(@Param("flightStatus") String flightStatus, @Param("airportCode") String airportCode);
 
-//    ;Find Flights by Status - - - -
-@Query("SELECT f FROM Flight f WHERE f.flightStatus = :flightStatus")
-    List<Flight> findByStatus(@Param("flightStatus") String flightStatus);
-
-//    ;Find Flights by Airport - - - -
-    @Query("SELECT c FROM Flight c JOIN c.airport p WHERE p.name = :airportName")
-    List<Flight> findByAirport(@Param("airportName") String airportName);
-
-//    ;Find Flights by City - - - -
-    @Query("SELECT c FROM Flight c JOIN c.city p WHERE p.name = :cityName")
-    List<Flight> findByCity(@Param("cityName") String cityName);
+//    Find Departing Flights by Airport - - - -
+    @Query("SELECT f FROM Flight f WHERE f.flightStatus = :flightStatus AND f.airport.code = :airportCode")
+    List<Flight> findDepartingFlightsByAirport(@Param("flightStatus") String flightStatus, @Param("airportCode") String airportCode);
 }

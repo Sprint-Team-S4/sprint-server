@@ -20,11 +20,17 @@ In order to run this program locally, you are going to need:
 
 # 3. Terminal
 
-- Run the command: docker build -t username/sprintserver .
-- Run the command: docker push username/sprintserver:latest
+- Run the command: docker build -t kaylvigh/sprintserver .
+- Run the command: docker push kaylvigh/sprintserver:latest
 - Run the command: docker-compose up
 
-# TO-DO LIST
+docker build -t kaylvigh/sprintserver .
+docker push kaylvigh/sprintserver:latest
+docker-compose up
+ 
+# database refresh
 
-- Add "Flight" entity
-- Complete controllers
+mysql -u root -p
+Gosthatsit2
+DROP DATABASE finalsprint;
+CREATE DATABASE finalsprint;

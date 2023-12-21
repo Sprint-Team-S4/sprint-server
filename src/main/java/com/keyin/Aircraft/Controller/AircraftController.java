@@ -1,32 +1,54 @@
 package com.keyin.Aircraft.Controller;
 
 import com.keyin.Aircraft.Aircraft;
-import com.keyin.Aircraft.Repository.AircraftRepository;
-import com.keyin.Airport.Airport;
+import com.keyin.Aircraft.Service.AircraftService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/aircraft")
+@CrossOrigin
 public class AircraftController {
 
-    //    ;Repository - - - -
+    private final AircraftService aircraftService;
+
     @Autowired
-    private AircraftRepository repo;
+    public AircraftController(AircraftService aircraftService) {
+        this.aircraftService = aircraftService;
+    }
 
-    //    ;Get Airports by Aircraft - - - -
-    @GetMapping("/{id}/airports")
-    public List<Airport> getAirportsByAircraft(@PathVariable Long aircraftId) {
-        Aircraft aircraft = repo.findById(aircraftId).orElse(null);
+    @GetMapping
+    public ResponseEntity<List<Aircraft>> getAllAircrafts() {
+        List<Aircraft> aircrafts = aircraftService.getAllAircrafts();
+        return ResponseEntity.ok(aircrafts);
+    }
 
-        if (aircraft != null) {
-            return aircraft.getAirports();
-        } else {
-            return List.of();
-        }
+    @GetMapping("/{id}")
+    public ResponseEntity<Aircraft> getAircraftById(@PathVariable Long id) {
+        Aircraft aircraft = aircraftService.getAircraftById(id)
+                .orElseThrow(() -> new RuntimeException("Aircraft not found for this id :: " + id));
+        return ResponseEntity.ok(aircraft);
+    }
+
+    @PostMapping
+    public ResponseEntity<Aircraft> createAircraft(@Valid @RequestBody Aircraft aircraft) {
+        Aircraft newAircraft = aircraftService.saveAircraft(aircraft);
+        return ResponseEntity.ok(newAircraft);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Aircraft> updateAircraft(@PathVariable Long id, @Valid @RequestBody Aircraft aircraftDetails) {
+        Aircraft updatedAircraft = aircraftService.updateAircraft(id);
+        return ResponseEntity.ok(updatedAircraft);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteAircraft(@PathVariable Long id) {
+        aircraftService.deleteAircraft(id);
+        return ResponseEntity.noContent().build();
     }
 }
-

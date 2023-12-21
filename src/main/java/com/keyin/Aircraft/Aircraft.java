@@ -1,27 +1,33 @@
 package com.keyin.Aircraft;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.keyin.Airline.Airline;
 import jakarta.persistence.*;
-import com.keyin.Airport.Airport;
-import java.util.List;
 
 @Entity
 public class Aircraft {
 
-    //    ;Primary Key & Fields - - - -
+    //    Primary Key & Fields - - - -
     @Id
-    @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence", allocationSize = 1, initialValue=1)
+    @SequenceGenerator(name = "aircraft_sequence", sequenceName = "aircraft_sequence",allocationSize = 1,initialValue = 1)
     @GeneratedValue(generator = "aircraft_sequence")
     private long id;
 
-    //    ;Relationships - - - -
-    @ManyToOne
+    //    Relationships - - - -
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "airline_id")
+    @JsonIgnore
     private Airline airline;
 
-    @ManyToMany
-    private List<Airport> airports;
+    //    Constructors - - - -
+    public Aircraft(){}
 
-    //    ;Getters & Setters - - - -
+    public Aircraft(long id, Airline airline) {
+        this.id = id;
+        this.airline = airline;
+    }
+
+    //    Getters & Setters - - - -
     public long getId() {
         return id;
     }
@@ -37,11 +43,4 @@ public class Aircraft {
     public void setAirline(Airline airline) {
         this.airline = airline;
     }
-
-    public List<Airport> getAirports() {return airports;}
-
-    public void setAirports(List<Airport> airports) {
-        this.airports = airports;
-    }
-
 }
