@@ -4,17 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8423c37c-385f-4c2c-adb2-995e3a1aab04" name="Changes" comment="Tmr will be fun">
+
+    <list default="true" id="8423c37c-385f-4c2c-adb2-995e3a1aab04" name="Changes" comment="Slightly redid how flight creation is mapped (it is now under flight/create)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerrun.aws.json" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerrun.aws.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Admin/Controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Aircraft/Controller/AircraftController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Controller/AirlineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airline/Controller/AirlineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Controller/AirportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Airport/Controller/AirportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/City/Controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Flight/Controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Controller/GateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Gate/Controller/GateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Controller/PassengersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/Passengers/Controller/PassengersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/Kayleighs-Current-Wip-Branch" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="S4-sprint" />
@@ -39,6 +72,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;AWS-Prep&quot;,
@@ -52,9 +86,19 @@
     </key>
   </component>
   <component name="RunManager">
+
     <configuration name="Unnamed" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.keyin.RestApplication" />
       <module name="Sprint2" />
+
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,15 +161,89 @@
       <option name="project" value="LOCAL" />
       <updated>1703138244824</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="FIXED THE REPEATING it worked for city, still need to test everything else">
+      <option name="closed" value="true" />
+      <created>1703118750232</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703118750232</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed controllers">
+      <option name="closed" value="true" />
+      <created>1703122847385</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703122847385</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Latest version. Made it look nicer.">
+      <option name="closed" value="true" />
+      <created>1703124522704</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703124522704</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Just trying something different with the readme and sql">
+      <option name="closed" value="true" />
+      <created>1703125657558</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1703125657558</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Just trying something different with the readme and sql">
+      <option name="closed" value="true" />
+      <created>1703125696431</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703125696431</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added airline field to flight!">
+      <option name="closed" value="true" />
+      <created>1703130297925</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703130297925</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added a Cors Config file, tested it and it seems to have worked?">
+      <option name="closed" value="true" />
+      <created>1703141377959</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703141377959</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Slightly redid how flight creation is mapped (it is now under flight/create)">
+      <option name="closed" value="true" />
+      <created>1703163020741</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703163020741</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="(workspace fix and merge fix)" />
     <MESSAGE value="Merge remote-tracking branch 'origin/Kayleigh-DB-Change-Test' into Kayleigh-DB-Change-Test" />
     <MESSAGE value="Changed things up again, starting a different way of injecting data, the readme is a little messed up now but the dockerization works again" />
     <MESSAGE value="Added @CrossOrigin to every controller" />
-    <MESSAGE value="Tmr will be fun" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tmr will be fun" />
+
+    <MESSAGE value="added constructors !!" />
+    <MESSAGE value="FIXED THE REPEATING it worked for city, still need to test everything else" />
+    <MESSAGE value="Fixed controllers" />
+    <MESSAGE value="Latest version. Made it look nicer." />
+    <MESSAGE value="Just trying something different with the readme and sql" />
+    <MESSAGE value="Added airline field to flight!" />
+    <MESSAGE value="Added a Cors Config file, tested it and it seems to have worked?" />
+    <MESSAGE value="Slightly redid how flight creation is mapped (it is now under flight/create)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slightly redid how flight creation is mapped (it is now under flight/create)" />
+
   </component>
 </project>

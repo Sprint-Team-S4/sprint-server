@@ -39,4 +39,8 @@ public class AircraftService {
     public void deleteAircraft(Long id) {
         aircraftRepository.deleteById(id);
     }
+
+    public List<Aircraft> getAircraftByAirlineId(Long airlineId) {
+        return aircraftRepository.findByAirlineId(airlineId);
+    }
 }

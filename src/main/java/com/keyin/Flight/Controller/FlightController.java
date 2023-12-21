@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/flight")
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class FlightController {
 
     private final FlightService flightService;
@@ -34,10 +34,10 @@ public class FlightController {
         return ResponseEntity.ok(flight);
     }
 
-    @PostMapping
-    public ResponseEntity<Flight> createFlight(@Valid @RequestBody Flight flight) {
-        Flight newFlight = flightService.saveFlight(flight);
-        return ResponseEntity.ok(newFlight);
+    @PostMapping("/create")
+    public ResponseEntity<Flight> createFlight(@RequestBody Flight flight) {
+        Flight createdFlight = flightService.createFlight(flight);
+        return ResponseEntity.ok(createdFlight);
     }
 
     @PutMapping("/{id}")
@@ -62,6 +62,18 @@ public class FlightController {
     @GetMapping("/departing/{airportCode}")
     public ResponseEntity<List<Flight>> getDepartingFlightsByAirport(@PathVariable String airportCode) {
         List<Flight> flights = flightService.findDepartingFlightsByAirport(airportCode);
+        return ResponseEntity.ok(flights);
+    }
+
+    @GetMapping("/arriving")
+    public ResponseEntity<List<Flight>> getAllArrivingFlights() {
+        List<Flight> flights = flightService.findAllArrivingFlights();
+        return ResponseEntity.ok(flights);
+    }
+
+    @GetMapping("/departing")
+    public ResponseEntity<List<Flight>> getAllDepartingFlights() {
+        List<Flight> flights = flightService.findAllDepartingFlights();
         return ResponseEntity.ok(flights);
     }
 }

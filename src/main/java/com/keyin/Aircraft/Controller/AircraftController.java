@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/aircraft")
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class AircraftController {
 
     private final AircraftService aircraftService;
@@ -50,5 +50,11 @@ public class AircraftController {
     public ResponseEntity<Void> deleteAircraft(@PathVariable Long id) {
         aircraftService.deleteAircraft(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/byAirline/{airlineId}")
+    public ResponseEntity<List<Aircraft>> getAircraftByAirline(@PathVariable Long airlineId) {
+        List<Aircraft> aircrafts = aircraftService.getAircraftByAirlineId(airlineId);
+        return ResponseEntity.ok(aircrafts);
     }
 }

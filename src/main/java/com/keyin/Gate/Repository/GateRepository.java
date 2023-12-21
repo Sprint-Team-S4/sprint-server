@@ -9,5 +9,6 @@ import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "gate", path = "gate")
 public interface GateRepository extends JpaRepository<Gate, Long> {
-    List<Gate> findByAirport(Airport airport);
+    List<Gate> findByAirportId(Long airportId);
+
 }

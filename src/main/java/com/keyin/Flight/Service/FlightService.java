@@ -39,6 +39,7 @@ public class FlightService {
         flight.setGate(flightDetails.getGate());
         flight.setAircraft(flightDetails.getAircraft());
         flight.setPassengers(flightDetails.getPassengers());
+        flight.setAirline(flightDetails.getAirline());
         return flightRepository.save(flight);
     }
 
@@ -52,5 +53,17 @@ public class FlightService {
 
     public List<Flight> findDepartingFlightsByAirport(String airportCode) {
         return flightRepository.findDepartingFlightsByAirport("Departing", airportCode);
+    }
+
+    public List<Flight> findAllArrivingFlights() {
+        return flightRepository.findAllArrivingFlights();
+    }
+
+    public List<Flight> findAllDepartingFlights() {
+        return flightRepository.findAllDepartingFlights();
+    }
+
+    public Flight createFlight(Flight flight) {
+        return flightRepository.save(flight);
     }
 }

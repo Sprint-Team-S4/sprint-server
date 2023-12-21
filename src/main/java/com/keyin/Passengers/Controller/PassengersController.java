@@ -11,9 +11,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/passengers")
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class PassengersController {
-
     private final PassengersService passengersService;
 
     @Autowired

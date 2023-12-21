@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/city")
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class CityController {
 
     private final CityService cityService;
