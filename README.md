@@ -10,28 +10,30 @@ In order to run this program locally, you are going to need:
 - Open the repository in IntelliJ.
 - Right-click the pom.xml file and navigate to Maven > "Reload Project" to download dependencies.
 
-# 2.a Maven Clean Install (tool window [view > tool windows > maven])
+# 2. Maven Clean Install
 
+Option 1: (tool window [view > tool windows > maven])
 - Under the "Lifecycle" folder, double-click on "clean" and then double-click on "install".
 
-# 2.b Maven Clean Install (terminal)
-
-- Run the command: mvn clean install
+Option 2: (terminal)
+- Run the command: 
+`mvn clean install`
 
 # 3. Terminal
 
-- Run the command: docker build -t kaylvigh/sprintserver .
-- Run the command: docker push kaylvigh/sprintserver:latest
-- Run the command: docker-compose up
-
-docker build -t kaylvigh/sprintserver .
-docker push kaylvigh/sprintserver:latest
-docker-compose up
- 
-# database refresh
-
-mysql -u root -p
+- (To restart database) Run the commands:
+`mysql -u root -p`
+password:
 Gosthatsit2
-DROP DATABASE finalsprint;
+`DROP DATABASE finalsprint;
 CREATE DATABASE finalsprint;
-exit
+exit`
+
+- (Docker) Run the commands:
+`docker build -t username/sprintserver .
+docker push username/sprintserver:latest
+docker-compose up`
+
+# 4. Inject Data into Database
+
+- In mysql, copy and paste the text from [resources > data.sql] and run it as a query.
