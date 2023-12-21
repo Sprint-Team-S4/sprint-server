@@ -1,5 +1,6 @@
 package com.keyin.Aircraft;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.keyin.Airline.Airline;
 import jakarta.persistence.*;
 
@@ -15,7 +16,11 @@ public class Aircraft {
     //    Relationships - - - -
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "airline_id")
+    @JsonIgnore
     private Airline airline;
+
+    //    Constructors - - - -
+    public Aircraft(){}
 
     public Aircraft(long id, Airline airline) {
         this.id = id;

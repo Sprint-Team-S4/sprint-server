@@ -12,17 +12,18 @@ public class Admin {
     @GeneratedValue(generator = "admin_sequence")
     private long id;
 
-    @NotNull
     private String username;
+
+    private String password;
+
+    //    Constructors - - - -
+    public Admin(){}
 
     public Admin(long id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
     }
-
-    @NotNull
-    private String password;
 
     //    Getters & Setters - - - -
     public long getId() {

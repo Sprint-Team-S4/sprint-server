@@ -2,7 +2,6 @@ package com.keyin.City;
 
 import com.keyin.Airport.Airport;
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,15 +15,16 @@ public class City {
     @GeneratedValue(generator = "city_sequence")
     private long id;
 
-    @NotNull
     private String name;
 
-    @NotNull
     private String country;
 
     //    Relationships - - - -
     @OneToMany(mappedBy = "city", cascade = CascadeType.PERSIST)
     private List<Airport> airports = new ArrayList<>();
+
+    //    Constructors - - - -
+    public City(){}
 
     public City(long id, String name, String country, List<Airport> airports) {
         this.id = id;

@@ -27,7 +27,7 @@ In order to run this program locally, you are going to need:
 docker build -t kaylvigh/sprintserver .
 docker push kaylvigh/sprintserver:latest
 docker-compose up
-
+ 
 # database refresh
 
 mysql -u root -p

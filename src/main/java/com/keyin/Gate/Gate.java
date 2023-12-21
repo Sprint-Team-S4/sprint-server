@@ -1,8 +1,8 @@
 package com.keyin.Gate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.keyin.Airport.Airport;
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity
 public class Gate {
@@ -13,17 +13,19 @@ public class Gate {
     @GeneratedValue(generator = "gate_sequence")
     private long id;
 
-    @NotNull
     private String gateNumber;
 
-    @NotNull
     private String terminalNum;
 
     //    Relationships - - - -
-
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "airport_id")
+    @JsonIgnore
     private Airport airport;
+
+    //    Constructors - - - -
+    public Gate() {
+    }
 
     public Gate(long id, String gateNumber, String terminalNum, Airport airport) {
         this.id = id;

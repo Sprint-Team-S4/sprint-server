@@ -5,7 +5,6 @@ import com.keyin.Airport.Airport;
 import com.keyin.Gate.Gate;
 import com.keyin.Passengers.Passengers;
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +18,8 @@ public class Flight {
     @GeneratedValue(generator = "flight_sequence")
     private long id;
 
-    @NotNull
     private String flightStatus; // Arriving/Departing
 
-    @NotNull
     private String flightNumber;
 
     //    Relationships - - - -
@@ -38,9 +35,12 @@ public class Flight {
     @JoinColumn(name = "aircraft_id")
     private Aircraft aircraft;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "flight_id")
     private List<Passengers> passengers = new ArrayList<>();
+
+    //    Constructors - - - -
+    public Flight() {}
 
     public Flight(long id, String flightStatus, String flightNumber, Airport airport, Gate gate, Aircraft aircraft, List<Passengers> passengers) {
         this.id = id;

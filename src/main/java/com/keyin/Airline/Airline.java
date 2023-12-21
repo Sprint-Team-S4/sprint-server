@@ -2,7 +2,6 @@ package com.keyin.Airline;
 
 import com.keyin.Aircraft.Aircraft;
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,16 +15,16 @@ public class Airline {
     @GeneratedValue(generator = "airline_sequence")
     private long id;
 
-
-    @NotNull
     private String airlineName;
 
-    @NotNull
     private String contactEmail;
 
     //    Relationships - - - -
     @OneToMany(mappedBy = "airline", cascade = CascadeType.ALL)
     private List<Aircraft> aircrafts = new ArrayList<>();
+
+    //    Constructors - - - -
+    public Airline(){}
 
     public Airline(long id, String airlineName, String contactEmail, List<Aircraft> aircrafts) {
         this.id = id;

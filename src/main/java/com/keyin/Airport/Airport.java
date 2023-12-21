@@ -1,9 +1,9 @@
 package com.keyin.Airport;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.keyin.City.City;
 import com.keyin.Gate.Gate;
 import jakarta.persistence.*;
-import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,19 +17,21 @@ public class Airport {
     @GeneratedValue(generator = "airport_sequence")
     private long id;
 
-    @NotNull
     private String name;
 
-    @NotNull
     private String code;
 
     //    Relationships - - - -
     @ManyToOne
     @JoinColumn(name = "city_id", nullable = true)
+    @JsonIgnore
     private City city;
 
     @OneToMany(mappedBy = "airport", cascade = CascadeType.ALL)
     private List<Gate> gates = new ArrayList<>();
+
+    //    Constructors - - - -
+    public Airport(){}
 
     public Airport(long id, String name, String code, City city, List<Gate> gates) {
         this.id = id;

@@ -1,7 +1,6 @@
 package com.keyin.Passengers;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Passengers {
@@ -12,13 +11,14 @@ public class Passengers {
     @GeneratedValue(generator = "passengers_sequence")
     private long id;
 
-    @NotNull
     private String firstName;
 
-    @NotNull
     private String lastName;
 
     private String phoneNumber;
+
+    //    Constructors - - - -
+    public Passengers(){}
 
     public Passengers(long id, String firstName, String lastName, String phoneNumber) {
         this.id = id;
